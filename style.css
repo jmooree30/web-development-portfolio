@@ -1,0 +1,61 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+body{
+  height:100%;
+}
+
+.top{
+ height: 250px;
+}
+.middle{
+ height: 250px;
+}
+.bottom{
+ height: 250px;
+}
+
+/* language icons */
+i[class^="devicon"]{
+  font-size: 12vw;
+}
+.devicon-linux-plain{
+  color:black;
+}
+.devicon-css3-plain{
+  color:#4db8ff;
+}
+.devicon-html5-plain{
+  color:#ff944d;
+}
+.devicon-rails-plain{
+  color:#ff0000;
+}
+.devicon-ruby-plain{
+  color:#cc0000;
+}
+.devicon-react-original{
+  color:#99ccff;
+}
+.devicon-javascript-plain{
+  color:#ffcc00;
+}
+.devicon-github-plain{
+  
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-10);
+  }
+  100% {
+    transform: translateX(80%);
+  }
+}
+
+.this {  
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+  animation-fill-mode: forwards;
+}
