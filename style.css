@@ -139,12 +139,19 @@ i[class^="devicon"]{
 @media only screen and (max-width: 500px) {
     p {
       font-size: 4vw; 
-    }
-    img{
-      display: none;
+      clear:left;
     }
     i[class^="devicon"]{
       font-size: 13vw;
       padding-left: 7vw;
     }
-}
+    .top{
+      height: 20vh;
+     }
+    .middle{
+      height: 60vh;
+    }
+    .bottom{
+     height: 20vh;
+    }
+  }
