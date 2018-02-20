@@ -15,9 +15,9 @@ p{
 
 button{
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color:  #33ff33;
+  background-color:  white;
   box-shadow: 0 0.05em 0.25em 0 rgba(0,0,0,0.5);
-  color: #fff;
+  color: gray;
   display: block;
   margin:0 auto;
   font-size: 1em;
