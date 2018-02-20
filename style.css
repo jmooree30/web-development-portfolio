@@ -135,3 +135,16 @@ i[class^="devicon"]{
   animation: 2s ease-out 3.5s 1 opa;
   animation-fill-mode: forwards;
 }
+
+@media only screen and (max-width: 500px) {
+    p {
+      font-size: 4vw; 
+    }
+    img{
+      display: none;
+    }
+    i[class^="devicon"]{
+      font-size: 13vw;
+      padding-left: 7vw;
+    }
+}
