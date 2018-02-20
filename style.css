@@ -5,7 +5,7 @@
 
 body{
   max-height:100%;
-  background:black;
+  background:white;
 }
 
 p{
@@ -34,7 +34,7 @@ button{
  height: 40vh;
 }
 img{
-  border:2px solid white;
+  border:2px solid black;
   float:left;
   position: relative;
   top: -40px;
@@ -54,7 +54,7 @@ i[class^="devicon"]{
   padding-left: 10vw;
 }
 .devicon-linux-plain{
-  color:white;
+  color:black;
 }
 .devicon-css3-plain{
   color:#4db8ff;
@@ -115,6 +115,8 @@ i[class^="devicon"]{
   0% {
     opacity: 0;
   }
+  95%{
+  }
   100% {
     opacity: 1;
   }
@@ -125,7 +127,7 @@ i[class^="devicon"]{
   padding: 15px;
   width: 60%;
   min-height: 100%;
-  background:#b3b3b3;
+  background:#f2f2f2;
   display: block;
   margin:0 auto;
   border-radius: 25px;
