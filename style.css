@@ -82,3 +82,24 @@ i[class^="devicon"]{
   animation: 1.5s ease-out 1.5s 1 slideInFromRight;
   animation-fill-mode: forwards;
 }
+
+@keyframes opa{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.intro{
+  width: 40%;
+  min-height: 100%;
+  background:white;
+  display: block;
+  margin:0 auto;
+  border-radius: 25px;
+  opacity: 0;
+  animation: 2s ease-out 3.5s 1 opa;
+  animation-fill-mode: forwards;
+}
