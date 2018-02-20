@@ -8,20 +8,49 @@ body{
   background:black;
 }
 
+p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2vw;
+}
+
+button{
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color:  #33ff33;
+  box-shadow: 0 0.05em 0.25em 0 rgba(0,0,0,0.5);
+  color: #fff;
+  display: block;
+  margin:0 auto;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  padding: 1rem 3.5rem;
+  border: none;
+}
+
 .top{
- height: 33vh;
+ height: 30vh;
 }
 .middle{
- height: 33vh;
+ height: 40vh;
+}
+img{
+  border:2px solid white;
+  float:left;
+  position: relative;
+  top: -40px;
+  left:-40px;
+  height: 15vh;
+  width: 15vh;
+  border-radius: 50px;
 }
 .bottom{
- height: 33vh;
+ height: 30vh;
  width:100%;
 }
 
 /* language icons */
 i[class^="devicon"]{
-  font-size: 12vw;
+  font-size: 10vw;
   padding-left: 10vw;
 }
 .devicon-linux-plain{
@@ -54,7 +83,7 @@ i[class^="devicon"]{
     transform: translateX(-80%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(4%);
   }
 }
 
@@ -70,7 +99,7 @@ i[class^="devicon"]{
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(4%);
   }
 }
 
@@ -92,9 +121,11 @@ i[class^="devicon"]{
 }
 
 .intro{
-  width: 40%;
+  border:1px solid black;
+  padding: 15px;
+  width: 60%;
   min-height: 100%;
-  background:white;
+  background:#b3b3b3;
   display: block;
   margin:0 auto;
   border-radius: 25px;
