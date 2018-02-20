@@ -5,6 +5,7 @@
 
 body{
   max-height:100%;
+  background:black;
 }
 
 .top{
@@ -14,7 +15,6 @@ body{
  height: 33vh;
 }
 .bottom{
- padding-top: 10vh;
  height: 33vh;
  width:100%;
 }
@@ -25,7 +25,7 @@ i[class^="devicon"]{
   padding-left: 10vw;
 }
 .devicon-linux-plain{
-  color:black;
+  color:white;
 }
 .devicon-css3-plain{
   color:#4db8ff;
@@ -45,6 +45,9 @@ i[class^="devicon"]{
 .devicon-javascript-plain{
   color:#ffcc00;
 }
+.devicon-github-plain{
+  color:green;
+}
 
 @keyframes slideInFromLeft {
   0% {
@@ -62,7 +65,7 @@ i[class^="devicon"]{
 
 @keyframes slideInFromRight {
   0% {
-    transform: translateX(80%);
+    transform: translateX(99%);
   }
   100% {
     transform: translateX(0);
@@ -70,6 +73,12 @@ i[class^="devicon"]{
 }
 
 .animate-2{  
-  animation: 1.5s ease-out 0s 1 slideInFromRight;
+  position: fixed;
+  bottom:0;
+  display: none;
+}
+
+.animate-2{  
+  animation: 1.5s ease-out 1.5s 1 slideInFromRight;
   animation-fill-mode: forwards;
 }
