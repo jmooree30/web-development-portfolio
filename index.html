@@ -1,49 +1,97 @@
-<form name="contactform" method="post" action="send_form_email.php">
-<table width="450px">
-<tr>
- <td valign="top">
-  <label for="first_name">First Name *</label>
- </td>
- <td valign="top">
-  <input  type="text" name="first_name" maxlength="50" size="30">
- </td>
-</tr>
-<tr>
- <td valign="top"">
-  <label for="last_name">Last Name *</label>
- </td>
- <td valign="top">
-  <input  type="text" name="last_name" maxlength="50" size="30">
- </td>
-</tr>
-<tr>
- <td valign="top">
-  <label for="email">Email Address *</label>
- </td>
- <td valign="top">
-  <input  type="text" name="email" maxlength="80" size="30">
- </td>
-</tr>
-<tr>
- <td valign="top">
-  <label for="telephone">Telephone Number</label>
- </td>
- <td valign="top">
-  <input  type="text" name="telephone" maxlength="30" size="30">
- </td>
-</tr>
-<tr>
- <td valign="top">
-  <label for="comments">Comments *</label>
- </td>
- <td valign="top">
-  <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
- </td>
-</tr>
-<tr>
- <td colspan="2" style="text-align:center">
-  <input type="submit" value="Submit">   <a href="http://www.freecontactform.com/email_form.php">Email Form</a>
- </td>
-</tr>
-</table>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jacob Moore</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+</head>
+<body>
+
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Jacob Moore</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Github</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+
+<div class="top-container">
+  <div id="background-image">
+    <p class="header">Lorem ipsum dolor sit</p>
+    <p class="content"> 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus leo suscipit porttitor vestibulum. Maecenas ac risus tortor. Nullam vel enim eu neque fringilla vulputate et a lacus. Maecenas placerat fermentum justo, et porta sapien accumsan ut.</p>
+    <button class="contact-button">Contact Me</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="sidebar-left">
+    <img src="ss.png">
+  </div>
+  <div class="article-left"> 
+    <h3 class="article-header">Responsive Design</h3>
+    <p class="article-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus leo suscipit porttitor vestibulum. Maecenas ac risus tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </div>
+</div>
+
+<div class="container" id="this">
+ <div class="sidebar-right">
+  <img src="chess.png">
+</div>
+<div class="article-right"> 
+  <h3 class="article-header">Ruby</h3>
+  <p class="article-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus leo suscipit porttitor vestibulum. Maecenas ac risus tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+</div>
+</div>
+
+<div class="container">
+  <div class="sidebar-left">
+    <img src="book.png">
+  </div>
+  <div class="article-left"> 
+    <h3 class="article-header">Ruby on Rails</h3>
+    <p class="article-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus leo suscipit porttitor vestibulum. Maecenas ac risus tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </div>
+</div>
+
+<div class="container" id="this">
+ <div class="sidebar-right">
+  <img src="calc.png">
+</div>
+<div class="article-right"> 
+  <h3 class="article-header">JavaScript</h3>
+  <p class="article-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus leo suscipit porttitor vestibulum. Maecenas ac risus tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+</div>
+</div>
+
+<div class="container">
+  <div class="sidebar-left">
+    <img src="git.png">
+  </div>
+  <div class="article-left"> 
+    <h3 class="article-header">Git</h3>
+    <p class="article-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent finibus leo suscipit porttitor vestibulum. Maecenas ac risus tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  </div>
+</div>
+
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
