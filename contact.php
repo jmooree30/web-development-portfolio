@@ -30,6 +30,7 @@ if(isset($_POST['submit'])){
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -46,18 +47,25 @@ if(isset($_POST['submit'])){
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="https://github.com/jmooree30"><strong>Github</strong></a></li>
+        <li><a href="resume.pdf" target="_blank"><strong>Resume</strong></a></li>
+        <li><a href="contact.php"><strong>Contact</strong></a></li>
       </ul>
     </div>
   </div>
 </nav> 
 
 <div class="container" id="max">
-  <h3>Contact Me</h3><br>
+  <h3><strong>Contact Me</strong></h3><br>
+  <div class="center">
+   <a href="https://github.com/jmooree30"><i class="fa fa-github"></i></a>
+    <a href="https://www.facebook.com/jacob.moore.796"><i class="fa fa-facebook-official"></i></a>
+    <a href="https://angel.co/jacob-moore-7?public_profile=1"><i class="fa fa-angellist"></i></a>
+  </div>
 <form action="" method="post">
-First Name:<br> <input type="text" name="first_name" placeholder="John" required><br>
-Last Name:<br> <input type="text" name="last_name" placeholder="Doe" required><br>
-Email:<br> <input type="text" name="email" placeholder="johndoe@gmail.com" required><br>
-Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+<strong>First Name:</strong><br> <input type="text" name="first_name" placeholder="John" required><br>
+<strong>Last Name:</strong><br> <input type="text" name="last_name" placeholder="Doe" required><br>
+<strong>Email:</strong><br> <input type="text" name="email" placeholder="johndoe@gmail.com" required><br>
+<strong>Message:</strong><br><textarea rows="5" name="message" cols="30"></textarea><br>
 <input type="submit" name="submit" value="Submit" required>
 </form>
 </div>

@@ -21,6 +21,29 @@ a{
   color: white !important;
 }
 
+i[class^="fa"] {
+  padding: 0 15px;  
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+i[class$="github"] {
+  color:green;
+}
+
+i[class$="official"] {
+  color: blue;
+}
+
+i[class$="angellist"] {
+  color: gray;
+}
+
+.center{
+  text-align: center;
+  width: 100%;
+}
+
 .navbar {
   border:none !important;
   background:#204060 !important;
@@ -31,7 +54,7 @@ a{
 }
 
 .container{
-  padding:20px;
+  padding:10px 20px;
   background: white;
   display: block;
   margin: 0 auto;
@@ -48,6 +71,7 @@ input[type="text"]{
 textarea{
   width: 100%;
   margin-bottom: 40px !important;
+  resize: none !important;
 }
 
 input[type="submit"]{
@@ -65,8 +89,8 @@ input[type="submit"]{
 
 @media only screen and (max-width: 500px) {
   .container{
-    padding-top: 40px;
-    width: 80% !important;
-    margin:30px !important;
+    display: block;
+    margin: 0 auto !important;
+    width: 90% !important;
   }
 }
