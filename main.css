@@ -24,14 +24,14 @@ img {
 }
 
 .navbar {
-    border:none !important;
-    margin-bottom: 0 !important;
-    background:#204060 !important;
+  border:none !important;
+  margin-bottom: 0 !important;
+  background:#204060 !important;
 }
 
 .underline{
   text-decoration: underline;
-  color:black;
+  color:black !;
 }
 
 a{
