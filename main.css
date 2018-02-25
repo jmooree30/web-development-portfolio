@@ -9,7 +9,7 @@ body{
   height:100%;
   max-width: 100%;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  background: #c6d9ec;
+  background: #c6d9ec !important;
 }
 
 img {
@@ -24,8 +24,13 @@ img {
 }
 
 .navbar {
+    border:none !important;
     margin-bottom: 0 !important;
     background:#204060 !important;
+}
+
+.underline{
+  text-decoration: underline;
 }
 
 a{
@@ -63,7 +68,7 @@ a{
 
 #background-image{
   min-height:400px;
-  background:url('showcase.jpg') no-repeat 0 -400px;
+  background:url('assets/showcase.jpg') no-repeat 0 -400px;
   text-align:center;
 }
 
