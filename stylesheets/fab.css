@@ -13,7 +13,8 @@ body{
 }
 
 h2{
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-top: 90px !important;
+  font-family: 'Metal Mania', cursive !important;
   font-weight: bold;
   text-align: center;
 }
