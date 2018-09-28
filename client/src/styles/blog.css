@@ -1,0 +1,22 @@
+.blog-container {
+  position: fixed;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.test {
+  position: absolute;
+  background: url("../assets/blog-image.jpg") center center fixed;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.blog-post-container {
+  z-index: 1;
+  height: 300px;
+  width: 400px;
+  margin: 80px 50px;
+  background: url("../assets/bubble-blog.jpg");
+}
