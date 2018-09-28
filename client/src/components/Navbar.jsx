@@ -43,13 +43,6 @@ export default class Navbar extends Component {
                   CONTACT
                 </Link>
               </li>
-              {/*
-              <li>
-                <Link to={"/blog"} className="navv">
-                  BLOG
-                </Link>
-              </li>
-              */}
               <li>
                 <Link to="/fab" className="navv">
                   FABRICATION
