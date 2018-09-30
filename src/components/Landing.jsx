@@ -51,7 +51,7 @@ export default class Landing extends Component {
       website: this.state.website,
       phone: this.state.phone
     };
-    fetch("/api/email", {
+    fetch("https://desolate-gorge-20931.herokuapp.com/api/email", {
       method: "POST",
       body: JSON.stringify(emailObj),
       headers: {
@@ -412,12 +412,10 @@ export default class Landing extends Component {
         <br />
         <br />
         <div>Looking for a Web Developer?</div>
+        <br />
         <div className="hands-wrapper">
           <img className="border-center" src={hands} />
         </div>
-        <br />
-        <br />
-        <div>Then let's do business!</div>
         <br />
         <br />
         <div id="fifty" />
