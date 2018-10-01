@@ -217,12 +217,12 @@ export default class Landing extends Component {
             </h3>
             <p className="article-content">
               While working for CompanyWide, I picked up this Node based
-              framework along with MongoDB databases. With over 800 on the clock
-              hours, creating full stack web applications with Meteor has become
-              second nature. The picture shows a feature I built that utilized
-              the Google Maps API to create a map and plot the locations of
-              current job listings based off of the longitude and latitudes
-              gathered with the Geocode API.{" "}
+              framework along with MongoDB. With over 800 on the clock hours,
+              creating full stack web applications with Meteor has become second
+              nature. The picture shows a feature I built that utilized the
+              Google Maps API to create a map and plot the locations of current
+              job listings based off of the longitude and latitudes gathered
+              with the Geocode API.{" "}
             </p>
           </div>
         </div>
