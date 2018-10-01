@@ -192,11 +192,13 @@ export default class Landing extends Component {
               <i className="devicon-heroku-original" />
             </h3>
             <p className="article-content">
-              This portfolio was built with the MERN stack and hosted with
-              Heroku. Most of the site is broken up into React components
-              utilizing the React router for navigation. The Express back end is
-              currently pretty light with a model for the comments in the blog
-              section listed below.
+              This portfolio was built with the MERN stack. The React front-end
+              is hosted with Netlify and communicates with a Nodejs/Express
+              back-end hosted with Heroku. Most of the site is broken up into
+              React components, utilizing the React router for navigation. The
+              Express back end handles sending emails and serving comments for
+              the blog section that is currently{" "}
+              <span className="underline">under construction</span> .
             </p>
           </div>
         </div>
@@ -215,11 +217,13 @@ export default class Landing extends Component {
               <span style={{ color: "green" }}>MongoDB</span>
             </h3>
             <p className="article-content">
-              During the course of my last internship I picked up this Node
-              based framework along with MongoDB. The picture shows a feature I
-              completed that utilized the Google Maps API to create a map and
-              plot the locations of current job listings based off of the
-              longitude and latitudes gathered with the Geocode API.{" "}
+              While working for CompanyWide, I picked up this Node based
+              framework along with MongoDB databases. With over 800 on the clock
+              hours, creating full stack web applications with Meteor has become
+              second nature. The picture shows a feature I built that utilized
+              the Google Maps API to create a map and plot the locations of
+              current job listings based off of the longitude and latitudes
+              gathered with the Geocode API.{" "}
             </p>
           </div>
         </div>
@@ -237,10 +241,12 @@ export default class Landing extends Component {
               <i className="devicon-css3-plain colored" />
             </h3>
             <p className="article-content">
-              I create 100% responsive web sites. Along with HTML5 and CSS3 I
-              have experience using Bootstrap and preprocessors(SASS). I created
-              the website pictured with my own personal CSS framework that
-              mimics Bootstraps 12 column grid layout.
+              In this day and age websites need to look good on a wide range of
+              devices with different screen sizes. I create 100% responsive web
+              sites that will look amazing no matter the device. Along with
+              HTML5 and CSS3, I have experience using Bootstrap. I created the
+              website pictured with my own personal CSS framework that mimics
+              Bootstraps 12 column grid layout.
             </p>
             <a
               href="https://github.com/jmooree30/css-grid-framework"
@@ -320,9 +326,12 @@ export default class Landing extends Component {
             </h3>
             <p className="article-content">
               Along with "The Odin Projects" curriculum and book "You Don't Know
-              JavaScript" I have completed Wes Bos's React JS course and will be
-              starting his Node.js course soon. In this project I used JS along
-              with HTML and CSS to create a calculator.
+              JavaScript", I have completed Wes Bos's "React JS", Brad
+              Traversy's "MERN(Front to Back)" and Andrew Mead's "complete
+              Nodejs" courses. Javascript is my language of choice and not a day
+              goes by where I don't try to learn something new with it. In this
+              project I used JS along with HTML and CSS to create a simple
+              calculator.
             </p>
             <a
               id="black"
@@ -345,9 +354,12 @@ export default class Landing extends Component {
               <span className="git">&nbsp;Git</span>
             </h3>
             <p className="article-content">
-              I have experience working with a team of developers using Git
-              version control. You can check out the repository for this website
-              in the link below.
+              Using some form of version control is important and beneficial
+              while working with a team of developers on a project. I've been
+              using Git for almost two years now, whether it be for my own
+              projects or working with other developers. You can check out the
+              repository for this website in the link below. Commit commit
+              commit...
             </p>
             <a
               id="black"
