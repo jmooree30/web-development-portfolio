@@ -1,22 +1,54 @@
-.blog-container {
-  position: fixed;
-  min-height: 100vh;
-  width: 100%;
-}
-
-.test {
-  position: absolute;
-  background: url("../assets/blog-image.jpg") center center fixed;
-  opacity: 0.5;
-  width: 100%;
+.blog-background {
   height: 100%;
-  z-index: -1;
+  background: #f1f1f1;
 }
 
-.blog-post-container {
-  z-index: 1;
-  height: 300px;
-  width: 400px;
-  margin: 80px 50px;
-  background: url("../assets/bubble-blog.jpg");
+.blog-about-me-text {
+  font-size: 16px;
+}
+
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-image: url("../assets/bubble-code.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 -100px;
+  width: 100%;
+  height: 200px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  height: 10vh;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
 }

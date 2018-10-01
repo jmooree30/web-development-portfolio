@@ -197,8 +197,7 @@ export default class Landing extends Component {
               back-end hosted with Heroku. Most of the site is broken up into
               React components, utilizing the React router for navigation. The
               Express back end handles sending emails and serving comments for
-              the blog section that is currently{" "}
-              <span className="underline">under construction</span> .
+              the blog section.
             </p>
           </div>
         </div>

@@ -147,6 +147,7 @@ i[class^="devicon"] {
   position: absolute;
   left: 50%;
   top: 50%;
+  width: 100%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
@@ -436,7 +437,6 @@ footer {
   height: 50px;
   text-align: center;
   padding: 15px;
-  margin-top: 30px;
   font-size: 14px;
   border-top: 1px solid #dddd;
 }
