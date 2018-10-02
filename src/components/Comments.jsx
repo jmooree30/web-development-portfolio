@@ -98,7 +98,7 @@ class Comments extends Component {
                               </small>
                             </span>
                             <strong
-                              className="text-success"
+                              className="text underline"
                               style={{ float: "left" }}
                             >
                               {object.name}

@@ -4,6 +4,10 @@ import "../styles/blog.css";
 import { HashLink as Link } from "react-router-hash-link";
 
 export default class Blog extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div className="blog-background">
@@ -20,9 +24,6 @@ export default class Blog extends Component {
               <Link to={"/bubble"}>
                 <div className="fakeimg" style={{ height: 200 }} />
               </Link>
-              <p className="blog-about-me-text">
-                Breaking down a bubble sort step by step using Javascript
-              </p>
             </div>
           </div>
           <div className="rightcolumn">
