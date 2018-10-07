@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Fab from "./components/Fab";
 import Blog from "./components/Blog";
 import Bubble from "./components/Bubble";
+import Sets from "./components/Sets";
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Fab exact path="/fab" component={Fab} />
             <Blog exact path="/blog" component={Blog} />
             <Bubble exact path="/bubble" component={Bubble} />
+            <Sets exact path="/sets" component={Sets} />
           </Switch>
           <Footer />
         </h1>

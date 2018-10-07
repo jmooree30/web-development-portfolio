@@ -30,6 +30,13 @@
   height: 200px;
 }
 
+.setimg {
+  background-image: url("../assets/es6.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px !important;
+}
+
 /* Add a card effect for articles */
 .card {
   background-color: white;

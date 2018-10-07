@@ -19,8 +19,18 @@ export default class Blog extends Component {
         <div className="row">
           <div className="leftcolumn">
             <div className="card">
+              <h2>
+                Es6 - Sets: What are they? What's the difference between Set and
+                Array?
+              </h2>
+              <h5>Date - Oct 6, 2018</h5>
+              <Link to={"/sets"}>
+                <div className="setimg" style={{ height: 200 }} />
+              </Link>
+            </div>
+            <div className="card">
               <h2>Dissecting a Bubble Sort</h2>
-              <h5>Date - Dec 7, 2017</h5>
+              <h5>Date - sept 1, 2018</h5>
               <Link to={"/bubble"}>
                 <div className="fakeimg" style={{ height: 200 }} />
               </Link>
