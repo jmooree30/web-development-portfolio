@@ -220,18 +220,18 @@ set.add(6) // Set { 1, 2, 3, 4, 5, 6 }
               <br />
               <br />
               <pre>{`
-                let arr = [1,2,3,4,5];
+let arr = [1,2,3,4,5];
 
-                arr.length // 5
+arr.length // 5
               `}</pre>
               <br />
               Set.size will return the number of values in the Set object.
               <br />
               <br />
               <pre>{`
-                let set = new Set([1,2,3,4,5]);
+let set = new Set([1,2,3,4,5]);
 
-                set.size // 5
+set.size // 5
               `}</pre>
               <br />
               <br />
