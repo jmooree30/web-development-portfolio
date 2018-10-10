@@ -10,6 +10,7 @@ import alex from "../assets/alex.jpeg";
 import vlad from "../assets/vlad.jpeg";
 import mern from "../assets/mern.jpg";
 import more from "../assets/more.png";
+import game from "../assets/game.png";
 import reactLogo from "../assets/react-logo.png";
 import { HashLink as Link } from "react-router-hash-link";
 import fancyMac from "../assets/fancy-mac.jpg";
@@ -74,6 +75,7 @@ export default class Landing extends Component {
     this.scrollEventHandler("fifth-slide", "left");
     this.scrollEventHandler("sixth-slide", "right");
     this.scrollEventHandler("seventh-slide", "left");
+    this.scrollEventHandler("eigth-slide", "right");
     this.scrollEventHandler("first-recomend", "fr");
     this.scrollEventHandler("second-recomend", "sr");
   }
@@ -137,6 +139,7 @@ export default class Landing extends Component {
     let fifthSlide = document.getElementById("fifth-slide");
     let sixthSlide = document.getElementById("sixth-slide");
     let seventhSlide = document.getElementById("seventh-slide");
+    let eigthSlide = document.getElementById("eigth-slide");
     let firstRecomend = document.getElementById("first-recomend");
     let secondRecomend = document.getElementById("second-recomend");
     firstSlide.style.visibility = "hidden";
@@ -146,6 +149,7 @@ export default class Landing extends Component {
     fifthSlide.style.visibility = "hidden";
     sixthSlide.style.visibility = "hidden";
     seventhSlide.style.visibility = "hidden";
+    eigthSlide.style.visibility = "hidden";
     firstRecomend.style.visibility = "hidden";
     secondRecomend.style.visibility = "hidden";
     window.addEventListener("scroll", this.handleScroll);
@@ -203,7 +207,7 @@ export default class Landing extends Component {
         </div>
         <div className="container" id="second-slide">
           <div className="sidebar-right">
-            <a href="https://companywide.com">
+            <a href="https://companywide.com" target="_blank">
               <img src={cw} />
             </a>
           </div>
@@ -228,7 +232,10 @@ export default class Landing extends Component {
         </div>
         <div className="container" id="third-slide">
           <div className="sidebar-left">
-            <a href="https://jmooree30.github.io/css-grid-framework/">
+            <a
+              href="https://jmooree30.github.io/css-grid-framework/"
+              target="_blank"
+            >
               <img src={ss} />
             </a>
           </div>
@@ -251,6 +258,7 @@ export default class Landing extends Component {
               href="https://github.com/jmooree30/css-grid-framework"
               id="black"
               className="underline"
+              target="_blank"
             >
               View project
             </a>
@@ -258,7 +266,7 @@ export default class Landing extends Component {
         </div>
         <div className="container" id="fourth-slide">
           <div className="sidebar-right">
-            <a href="https://github.com/jmooree30/Chess">
+            <a href="https://github.com/jmooree30/Chess" target="_blank">
               <img src={chess} />
             </a>
           </div>
@@ -277,6 +285,7 @@ export default class Landing extends Component {
               className="underline"
               href="https://github.com/jmooree30/Chess"
               id="black"
+              target="_blank"
             >
               View project
             </a>
@@ -284,7 +293,7 @@ export default class Landing extends Component {
         </div>
         <div className="container" id="fifth-slide">
           <div className="sidebar-left">
-            <a href="https://fast-citadel-52170.herokuapp.com/">
+            <a href="https://fast-citadel-52170.herokuapp.com/" target="_blank">
               <img src={book} />
             </a>
           </div>
@@ -304,6 +313,7 @@ export default class Landing extends Component {
               id="black"
               className="underline"
               href="https://github.com/jmooree30/Jakebook"
+              target="_blank"
             >
               View project
             </a>
@@ -311,7 +321,7 @@ export default class Landing extends Component {
         </div>
         <div className="container" id="sixth-slide">
           <div className="sidebar-right">
-            <a href="https://jmooree30.github.io/calculator/">
+            <a href="https://jmooree30.github.io/calculator/" target="_blank">
               <img src={calc} />
             </a>
           </div>
@@ -336,6 +346,7 @@ export default class Landing extends Component {
               id="black"
               className="underline"
               href="https://github.com/jmooree30/calculator"
+              target="_blank"
             >
               View project
             </a>
@@ -343,7 +354,7 @@ export default class Landing extends Component {
         </div>
         <div className="container" id="seventh-slide">
           <div className="sidebar-left">
-            <a href="https://github.com/jmooree30">
+            <a href="https://github.com/jmooree30" target="_blank">
               <img src={git} />
             </a>
           </div>
@@ -364,6 +375,32 @@ export default class Landing extends Component {
               id="black"
               className="underline"
               href="https://github.com/jmooree30/portfolio"
+              target="_blank"
+            >
+              View project
+            </a>
+          </div>
+        </div>
+        <div className="container" id="eigth-slide">
+          <div className="sidebar-right">
+            <a href="https://jmooree30.github.io/canvas/" target="_blank">
+              <img src={game} />
+            </a>
+          </div>
+          <div className="article-right">
+            <h3 className="article-header">Canvas</h3>
+            <p className="article-content">
+              I spend a lot of my free time building games with canvas. With all
+              the calculations and constant screen renderings that go into
+              making games, it's a great way to learn and improve writing
+              optimal algorithms so everything can run smoothly. Click the image
+              to play, or the link below to view the repository.
+            </p>
+            <a
+              id="black"
+              className="underline"
+              href="https://github.com/jmooree30/canvas"
+              target="_blank"
             >
               View project
             </a>
