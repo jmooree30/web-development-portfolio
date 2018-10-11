@@ -563,15 +563,6 @@ input[type="submit"] {
   }
 }
 
-@keyframes slide-left {
-  0% {
-    transform: translateX(-1125px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-
 div[data-slideleft="1"] {
   animation: slide-left 1.25s;
 }
@@ -582,15 +573,6 @@ div[data-slideleft="1"] {
   }
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes slide-right {
-  0% {
-    transform: translateX(1125px);
-  }
-  100% {
-    transform: translateX(0px);
   }
 }
 
