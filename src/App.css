@@ -29,6 +29,55 @@ img {
   border-radius: 5px;
 }
 
+.cmd {
+  height: 300px;
+  width: 50%;
+  background: black;
+  margin: 0 auto 10px auto;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.controls {
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  float: left;
+  margin: 5px;
+  opacity: 0.7;
+}
+
+#text {
+  line-height: 1.5;
+  padding: 10px;
+  text-align: left;
+  color: green;
+  font-family: Courier New;
+  font-size: 18px;
+  text-shadow: 0px 0px 10px green, 0px 0px 5px green;
+}
+
+.red {
+  background: red;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.green {
+  background: green;
+}
+
+.cmd-top {
+  background: #ddd;
+  width: 50%;
+  height: 25px;
+  margin: 0 auto;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
 .navbar-toggle {
   margin-top: 16px;
 }
@@ -151,14 +200,6 @@ i[class^="devicon"] {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-}
-
-.react-logo {
-  height: 75px;
-  width: 75px;
-  border: none !important;
-  animation: react-logo 5s infinite;
-  animation-timing-function: linear;
 }
 
 @keyframes react-logo {
@@ -298,40 +339,6 @@ i[class^="devicon"] {
 
 .article-header {
   font-family: "Playfair Display", serif;
-}
-
-.article-left {
-  font-size: 14px;
-  line-height: 2;
-  float: left;
-  text-align: center;
-  width: 45%;
-  margin-top: 75px;
-}
-
-.sidebar-left {
-  text-align: center;
-  width: 45%;
-  float: right;
-  margin-top: 75px;
-}
-
-.article-right {
-  font-size: 14px;
-  line-height: 2;
-  text-align: center;
-  padding-left: 100px;
-  float: right;
-  width: 50%;
-  margin-top: 75px;
-}
-
-.sidebar-right {
-  text-align: center;
-  padding-right: 100px;
-  width: 50%;
-  float: left;
-  margin-top: 75px;
 }
 
 h4 {

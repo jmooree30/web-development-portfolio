@@ -11,7 +11,6 @@ import vlad from "../assets/vlad.jpeg";
 import mern from "../assets/mern.jpg";
 import more from "../assets/more.png";
 import game from "../assets/game.png";
-import reactLogo from "../assets/react-logo.png";
 import { HashLink as Link } from "react-router-hash-link";
 import fancyMac from "../assets/fancy-mac.jpg";
 import hands from "../assets/hands.jpg";
@@ -68,30 +67,11 @@ export default class Landing extends Component {
   }
 
   handleScroll() {
-    this.scrollEventHandler("first-slide", "left");
-    this.scrollEventHandler("second-slide", "right");
-    this.scrollEventHandler("third-slide", "left");
-    this.scrollEventHandler("fourth-slide", "right");
-    this.scrollEventHandler("fifth-slide", "left");
-    this.scrollEventHandler("sixth-slide", "right");
-    this.scrollEventHandler("seventh-slide", "left");
-    this.scrollEventHandler("eigth-slide", "right");
     this.scrollEventHandler("first-recomend", "fr");
     this.scrollEventHandler("second-recomend", "sr");
   }
 
   scrollEventHandler(element, direction) {
-    if (this.isScrolledIntoView(document.getElementById(`${element}`))) {
-      let view = document.getElementById(`${element}`);
-      if (direction == "left") {
-        view.dataset.slideleft = "1";
-        view.style.visibility = "visible";
-      }
-      if (direction == "right") {
-        view.dataset.slideright = "1";
-        view.style.visibility = "visible";
-      }
-    }
     if (this.isScrolledIntoViewTwo(document.getElementById(`${element}`))) {
       let view = document.getElementById(`${element}`);
       if (direction == "fr") {
@@ -130,26 +110,34 @@ export default class Landing extends Component {
   }
 
   componentDidMount() {
+    const p = document.getElementById("text");
+    p.innerHTML = "";
+    let n = 0;
+    const str =
+      "Hello, I'm Jacob! I'm a Full Stack Web Developer from Boston, currently developing for a software company in Sioux Falls, South Dakota. Outside of work, I'm part of the moderation team at 'The Odin Project' and always enjoy helping new Web Developers reach their goals! ";
+    let typeTimer = setInterval(function() {
+      n = n + 1;
+      p.innerHTML = "> " + str.slice(0, n);
+      if (n === str.length) {
+        clearInterval(typeTimer);
+        p.innerHTML = "> " + str;
+        n = 0;
+        setInterval(function() {
+          if (n === 0) {
+            p.innerHTML = "> " + str + "|";
+            n = 1;
+          } else {
+            p.innerHTML = "> " + str;
+            n = 0;
+          }
+        }, 500);
+      }
+    }, 60);
+
     new GitHubCalendar(".calendar", "jmooree30", { responsive: true });
     window.scrollTo(0, 0);
-    let firstSlide = document.getElementById("first-slide");
-    let secondSlide = document.getElementById("second-slide");
-    let thirdSlide = document.getElementById("third-slide");
-    let fourthSlide = document.getElementById("fourth-slide");
-    let fifthSlide = document.getElementById("fifth-slide");
-    let sixthSlide = document.getElementById("sixth-slide");
-    let seventhSlide = document.getElementById("seventh-slide");
-    let eigthSlide = document.getElementById("eigth-slide");
     let firstRecomend = document.getElementById("first-recomend");
     let secondRecomend = document.getElementById("second-recomend");
-    firstSlide.style.visibility = "hidden";
-    secondSlide.style.visibility = "hidden";
-    thirdSlide.style.visibility = "hidden";
-    fourthSlide.style.visibility = "hidden";
-    fifthSlide.style.visibility = "hidden";
-    sixthSlide.style.visibility = "hidden";
-    seventhSlide.style.visibility = "hidden";
-    eigthSlide.style.visibility = "hidden";
     firstRecomend.style.visibility = "hidden";
     secondRecomend.style.visibility = "hidden";
     window.addEventListener("scroll", this.handleScroll);
@@ -163,11 +151,12 @@ export default class Landing extends Component {
       <div id="landing-top">
         <div className="top-container">
           <div className="header-wrapper">
-            <img src={reactLogo} className="react-logo" />
-            <div className="header" id="header">
-              JACOB MOORE
+            <div class="cmd-top">
+              <span className="controls red" />
+              <span className="controls yellow" />
+              <span className="controls green" />
             </div>
-            <div className="mini-header">- Full Stack Developer</div>
+            <div class="cmd" id="text" />
           </div>
           <div className="elipse">
             <div className="background-image" />
@@ -186,226 +175,6 @@ export default class Landing extends Component {
         />
         <div className="calendar">Loading the data just for you.</div>
 
-        <div className="container" id="first-slide">
-          <div className="sidebar-left">
-            <img classname="heroku" src={mern} />
-          </div>
-          <div className="article-left">
-            <h3 className="article-header">
-              <span className="heroku">Heroku</span>
-              <i className="devicon-heroku-original" />
-            </h3>
-            <p className="article-content">
-              This portfolio was built with the MERN stack. The React front-end
-              is hosted with Netlify and communicates with a Nodejs/Express
-              back-end hosted with Heroku. Most of the site is broken up into
-              React components, utilizing the React router for navigation. The
-              Express back end handles sending emails and serving comments for
-              the blog section.
-            </p>
-          </div>
-        </div>
-        <div className="container" id="second-slide">
-          <div className="sidebar-right">
-            <a href="https://companywide.com" target="_blank">
-              <img src={cw} />
-            </a>
-          </div>
-          <div className="article-right">
-            <h3 className="article-header">
-              <i className="devicon-meteor-plain colored" />
-              <span className="ruby">&nbsp;Meteorjs </span>
-              &amp;
-              <i className="devicon-mongodb-plain colored" />
-              <span style={{ color: "green" }}>MongoDB</span>
-            </h3>
-            <p className="article-content">
-              While working for CompanyWide, I picked up this Node based
-              framework along with MongoDB. With over 800 on the clock hours,
-              creating full stack web applications with Meteor has become second
-              nature. The picture shows a feature I built that utilized the
-              Google Maps API to create a map and plot the locations of current
-              job listings based off of the longitude and latitudes gathered
-              with the Geocode API.{" "}
-            </p>
-          </div>
-        </div>
-        <div className="container" id="third-slide">
-          <div className="sidebar-left">
-            <a
-              href="https://jmooree30.github.io/css-grid-framework/"
-              target="_blank"
-            >
-              <img src={ss} />
-            </a>
-          </div>
-          <div className="article-left">
-            <h3 className="article-header">
-              <span className="html">HTML</span>
-              <i className="devicon-html5-plain colored" /> &amp;&nbsp;
-              <span className="css">CSS</span>
-              <i className="devicon-css3-plain colored" />
-            </h3>
-            <p className="article-content">
-              In this day and age websites need to look good on a wide range of
-              devices with different screen sizes. I create 100% responsive web
-              sites that will look amazing no matter the device. Along with
-              HTML5 and CSS3, I have experience using Bootstrap. I created the
-              website pictured with my own personal CSS framework that mimics
-              Bootstraps 12 column grid layout.
-            </p>
-            <a
-              href="https://github.com/jmooree30/css-grid-framework"
-              id="black"
-              className="underline"
-              target="_blank"
-            >
-              View project
-            </a>
-          </div>
-        </div>
-        <div className="container" id="fourth-slide">
-          <div className="sidebar-right">
-            <a href="https://github.com/jmooree30/Chess" target="_blank">
-              <img src={chess} />
-            </a>
-          </div>
-          <div className="article-right">
-            <h3 className="article-header">
-              <i className="devicon-ruby-plain colored" />
-              <span className="ruby">&nbsp;Ruby</span>
-            </h3>
-            <p className="article-content">
-              My primary focus is on object oriented programming along with data
-              structures, algorithms and testing. In this project I built a
-              command line Chess game where two players can play against each
-              other.
-            </p>
-            <a
-              className="underline"
-              href="https://github.com/jmooree30/Chess"
-              id="black"
-              target="_blank"
-            >
-              View project
-            </a>
-          </div>
-        </div>
-        <div className="container" id="fifth-slide">
-          <div className="sidebar-left">
-            <a href="https://fast-citadel-52170.herokuapp.com/" target="_blank">
-              <img src={book} />
-            </a>
-          </div>
-          <div className="article-left">
-            <h3 className="article-header">
-              <i className="devicon-rails-plain colored" />
-              <span className="ruby">&nbsp;Ruby on Rails</span>
-            </h3>
-            <p className="article-content">
-              I have built a handful of applications using this server side web
-              application framework and have a full understanding of the MVC
-              paradigm. This project was modeled similiarly to it's bigger
-              brother.
-            </p>
-            <p />
-            <a
-              id="black"
-              className="underline"
-              href="https://github.com/jmooree30/Jakebook"
-              target="_blank"
-            >
-              View project
-            </a>
-          </div>
-        </div>
-        <div className="container" id="sixth-slide">
-          <div className="sidebar-right">
-            <a href="https://jmooree30.github.io/calculator/" target="_blank">
-              <img src={calc} />
-            </a>
-          </div>
-          <div className="article-right">
-            <h3 className="article-header">
-              <i
-                className="devicon-javascript-plain"
-                style={{ color: "orange" }}
-              />
-              <span className="javascript">&nbsp;JavaScript</span>
-            </h3>
-            <p className="article-content">
-              Along with "The Odin Projects" curriculum and book "You Don't Know
-              JavaScript", I have completed Wes Bos's "React JS", Brad
-              Traversy's "MERN(Front to Back)" and Andrew Mead's "complete
-              Nodejs" courses. Javascript is my language of choice and not a day
-              goes by where I don't try to learn something new with it. In this
-              project I used JS along with HTML and CSS to create a simple
-              calculator.
-            </p>
-            <a
-              id="black"
-              className="underline"
-              href="https://github.com/jmooree30/calculator"
-              target="_blank"
-            >
-              View project
-            </a>
-          </div>
-        </div>
-        <div className="container" id="seventh-slide">
-          <div className="sidebar-left">
-            <a href="https://github.com/jmooree30" target="_blank">
-              <img src={git} />
-            </a>
-          </div>
-          <div className="article-left">
-            <h3 className="article-header">
-              <i className="devicon-github-plain colored" />
-              <span className="git">&nbsp;Git</span>
-            </h3>
-            <p className="article-content">
-              Using some form of version control is important and beneficial
-              while working with a team of developers on a project. I've been
-              using Git for almost two years now, whether it be for my own
-              projects or working with other developers. You can check out the
-              repository for this website in the link below. Commit commit
-              commit...
-            </p>
-            <a
-              id="black"
-              className="underline"
-              href="https://github.com/jmooree30/portfolio"
-              target="_blank"
-            >
-              View project
-            </a>
-          </div>
-        </div>
-        <div className="container" id="eigth-slide">
-          <div className="sidebar-right">
-            <a href="https://jmooree30.github.io/canvas/" target="_blank">
-              <img src={game} />
-            </a>
-          </div>
-          <div className="article-right">
-            <h3 className="article-header">Canvas</h3>
-            <p className="article-content">
-              I spend a lot of my free time building games with canvas. With all
-              the calculations and constant screen renderings that go into
-              making games, it's a great way to learn and improve writing
-              optimal algorithms so everything can run smoothly. Click the image
-              to play, or the link below to view the repository.
-            </p>
-            <a
-              id="black"
-              className="underline"
-              href="https://github.com/jmooree30/canvas"
-              target="_blank"
-            >
-              View project
-            </a>
-          </div>
-        </div>
         <br />
         <br />
         <div className="container testimonials">
