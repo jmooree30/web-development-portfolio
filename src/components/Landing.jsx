@@ -166,6 +166,7 @@ export default class Landing extends Component {
         />
         <br />
         <br />
+        <i className="devicon-javascript-plain" style={{ color: "orange" }} />
         <i className="devicon-meteor-plain colored" />
         <i className="devicon-mongodb-plain colored" />
         <i className="devicon-html5-plain colored" />
@@ -180,6 +181,7 @@ export default class Landing extends Component {
           <img className="project-image" src={game} alt="" />
           <img className="project-image" src={book} alt="" />
         </div>
+        <i className="devicon-github-plain colored" />
         <link
           rel="stylesheet"
           href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"
