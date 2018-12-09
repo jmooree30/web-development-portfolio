@@ -48,11 +48,6 @@ export default class Navbar extends Component {
                   BLOG
                 </Link>
               </li>
-              <li>
-                <Link to="/fab" className="navv">
-                  FABRICATION
-                </Link>
-              </li>
             </ul>
           </div>
         </div>

@@ -4,7 +4,6 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import Footer from "./components/Footer";
-import Fab from "./components/Fab";
 import Blog from "./components/Blog";
 import Bubble from "./components/Bubble";
 import Sets from "./components/Sets";
@@ -17,7 +16,6 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Landing exact path="/" component={Landing} />
-            <Fab exact path="/fab" component={Fab} />
             <Blog exact path="/blog" component={Blog} />
             <Bubble exact path="/bubble" component={Bubble} />
             <Sets exact path="/sets" component={Sets} />
