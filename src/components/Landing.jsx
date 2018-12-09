@@ -9,7 +9,6 @@ import bubbleBlog from "../assets/bubble-blog.jpg";
 import alex from "../assets/alex.jpeg";
 import vlad from "../assets/vlad.jpeg";
 import mern from "../assets/mern.jpg";
-import more from "../assets/more.png";
 import game from "../assets/game.png";
 import { HashLink as Link } from "react-router-hash-link";
 import fancyMac from "../assets/fancy-mac.jpg";
@@ -132,7 +131,7 @@ export default class Landing extends Component {
           }
         }, 500);
       }
-    }, 60);
+    }, 45);
 
     new GitHubCalendar(".calendar", "jmooree30", { responsive: true });
     window.scrollTo(0, 0);
@@ -158,9 +157,7 @@ export default class Landing extends Component {
             </div>
             <div class="cmd" id="text" />
           </div>
-          <div className="elipse">
-            <div className="background-image" />
-          </div>
+          <div className="background-image" />
         </div>
         <br />
         <img
@@ -169,6 +166,20 @@ export default class Landing extends Component {
         />
         <br />
         <br />
+        <i className="devicon-meteor-plain colored" />
+        <i className="devicon-mongodb-plain colored" />
+        <i className="devicon-html5-plain colored" />
+        <i className="devicon-css3-plain colored" />
+        <i className="devicon-ruby-plain colored" />
+        <i className="devicon-rails-plain colored" />
+        <div className="container">
+          <img className="project-image" src={chess} alt="" />
+          <img className="project-image" src={calc} alt="" />
+          <img className="project-image" src={cw} alt="" />
+          <img className="project-image" src={ss} alt="" />
+          <img className="project-image" src={game} alt="" />
+          <img className="project-image" src={book} alt="" />
+        </div>
         <link
           rel="stylesheet"
           href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"

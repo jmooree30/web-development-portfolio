@@ -78,6 +78,11 @@ img {
   border-top-right-radius: 6px;
 }
 
+.project-image {
+  margin: 15px;
+  width: 30%;
+}
+
 .navbar-toggle {
   margin-top: 16px;
 }
@@ -92,6 +97,7 @@ button:hover {
 
 i[class^="devicon"] {
   padding: 10px;
+  font-size: 80px;
 }
 
 .navbar-brand {
@@ -141,18 +147,6 @@ i[class^="devicon"] {
   width: 80%;
   margin: auto;
   overflow: hidden;
-}
-
-.coursel {
-  width: 80% !important;
-  text-align: center;
-  margin: 0 auto !important;
-}
-
-@media only screen and (min-width: 1024px) {
-  .coursel {
-    width: 50% !important;
-  }
 }
 
 .heroku {
@@ -250,15 +244,6 @@ i[class^="devicon"] {
   z-index: -1;
 }
 
-.background-image-fab {
-  min-height: 100vh;
-  background: url("./assets/weld.jpg") no-repeat center center fixed;
-  text-align: center;
-  background-size: cover;
-  position: relative;
-  z-index: -1;
-}
-
 .background-image-bubble {
   min-height: 100vh;
   background: url("./assets/bubbles.jpg") no-repeat center center fixed;
@@ -282,15 +267,6 @@ i[class^="devicon"] {
   background-size: cover;
   position: relative;
   z-index: -1;
-}
-
-@media only screen and (max-width: 425px) {
-  .background-image {
-    background: url("./assets/showcase.jpg") no-repeat center center;
-  }
-  .background-image-fab {
-    background: url("./assets/weld.jpg") no-repeat center center;
-  }
 }
 
 .testimonials {
@@ -542,10 +518,6 @@ input[type="submit"] {
   button {
     margin-bottom: 20px !important;
   }
-  .article-left,
-  .article-right,
-  .sidebar-left,
-  .sidebar-right,
   .container {
     line-height: 1.5;
     margin-top: 15px;
@@ -560,31 +532,6 @@ input[type="submit"] {
     font-size: 18px;
     line-height: 1.5;
   }
-}
-@keyframes slide-left {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-div[data-slideleft="1"] {
-  animation: slide-left 1.25s;
-}
-
-@keyframes slide-right {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-div[data-slideright="1"] {
-  animation: slide-right 1.25s;
 }
 
 @keyframes fade {
@@ -619,6 +566,7 @@ div[data-fr="1"] {
 .calendar {
   width: 100% !important;
   max-width: 754px !important;
+  margin-top: 20px !important;
 }
 
 h2.f4.text-normal.mb-3 {

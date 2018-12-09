@@ -13,9 +13,6 @@ export default class Blog extends Component {
       <div className="blog-background">
         <br />
         <br />
-        <div className="header">
-          <h2>Recent Blog Posts..</h2>
-        </div>
         <div className="row">
           <div className="leftcolumn">
             <div className="card">
