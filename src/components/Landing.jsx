@@ -166,13 +166,13 @@ export default class Landing extends Component {
         />
         <br />
         <br />
-        <i className="devicon-javascript-plain" style={{ color: "orange" }} />
+        {/*         <i className="devicon-javascript-plain" style={{ color: "orange" }} />
         <i className="devicon-meteor-plain colored" />
         <i className="devicon-mongodb-plain colored" />
         <i className="devicon-html5-plain colored" />
         <i className="devicon-css3-plain colored" />
         <i className="devicon-ruby-plain colored" />
-        <i className="devicon-rails-plain colored" />
+        <i className="devicon-rails-plain colored" /> */}
         <div className="container">
           <img className="project-image" src={chess} alt="" />
           <img className="project-image" src={calc} alt="" />
