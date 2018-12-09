@@ -166,22 +166,77 @@ export default class Landing extends Component {
         />
         <br />
         <br />
-        {/*         <i className="devicon-javascript-plain" style={{ color: "orange" }} />
-        <i className="devicon-meteor-plain colored" />
+        {/*         
         <i className="devicon-mongodb-plain colored" />
         <i className="devicon-html5-plain colored" />
         <i className="devicon-css3-plain colored" />
         <i className="devicon-ruby-plain colored" />
-        <i className="devicon-rails-plain colored" /> */}
+         */}
         <div className="container">
-          <img className="project-image" src={chess} alt="" />
-          <img className="project-image" src={calc} alt="" />
-          <img className="project-image" src={cw} alt="" />
-          <img className="project-image" src={ss} alt="" />
-          <img className="project-image" src={game} alt="" />
-          <img className="project-image" src={book} alt="" />
+          <div className="flip-container">
+            <div className="flipper">
+              <div className="front">
+                <img className="fill" src={chess} alt="" />
+              </div>
+              <div className="back">
+                <i className="devicon-ruby-plain colored" />
+              </div>
+            </div>
+          </div>
+          <div className="flip-container">
+            <div className="flipper">
+              <div className="front">
+                <img className="fill" src={calc} alt="" />
+              </div>
+              <div className="back">
+                <i
+                  className="devicon-javascript-plain"
+                  style={{ color: "orange" }}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="flip-container">
+            <div className="flipper">
+              <div className="front">
+                <img className="fill" src={cw} alt="" />
+              </div>
+              <div className="back">
+                <i className="devicon-meteor-plain colored" />
+              </div>
+            </div>
+          </div>
+          <div className="flip-container">
+            <div className="flipper">
+              <div className="front">
+                <img className="fill" src={ss} alt="" />
+              </div>
+              <div className="back">
+                <i className="devicon-html5-plain colored" />
+              </div>
+            </div>
+          </div>
+          <div className="flip-container">
+            <div className="flipper">
+              <div className="front">
+                <img className="fill" src={game} alt="" />
+              </div>
+              <div className="back">
+                <i className="devicon-css3-plain colored" />
+              </div>
+            </div>
+          </div>
+          <div className="flip-container">
+            <div className="flipper">
+              <div className="front">
+                <img className="fill" src={book} alt="" />
+              </div>
+              <div className="back">
+                <i className="devicon-rails-plain colored" />
+              </div>
+            </div>
+          </div>
         </div>
-        <i className="devicon-github-plain colored" />
         <link
           rel="stylesheet"
           href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"
