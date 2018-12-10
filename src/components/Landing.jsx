@@ -109,6 +109,15 @@ export default class Landing extends Component {
   }
 
   componentDidMount() {
+    const flipper = document.querySelectorAll(".flipper");
+    setInterval(function() {
+      let random = Math.floor(Math.random() * 6);
+      flipper[random].className += " flip-it";
+      setTimeout(function() {
+        flipper[random].className = " flipper";
+      }, 1500);
+    }, 3000);
+
     const p = document.getElementById("text");
     p.innerHTML = "";
     let n = 0;
@@ -150,7 +159,7 @@ export default class Landing extends Component {
       <div id="landing-top">
         <div className="top-container">
           <div className="header-wrapper">
-            <div class="cmd-top">
+            <div className="cmd-top">
               <span className="controls red" />
               <span className="controls yellow" />
               <span className="controls green" />
@@ -166,13 +175,7 @@ export default class Landing extends Component {
         />
         <br />
         <br />
-        {/*         
-        <i className="devicon-mongodb-plain colored" />
-        <i className="devicon-html5-plain colored" />
-        <i className="devicon-css3-plain colored" />
-        <i className="devicon-ruby-plain colored" />
-         */}
-        <div className="container">
+        <div className="container" id="container">
           <div className="flip-container">
             <div className="flipper">
               <div className="front">
