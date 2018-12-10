@@ -116,10 +116,6 @@ img {
   margin: 15px;
   float: left;
 }
-/* flip the pane when hovered */
-.flip-container:hover .flipper {
-  transform: rotateY(180deg);
-}
 
 .flip-it {
   transform: rotateY(180deg);
