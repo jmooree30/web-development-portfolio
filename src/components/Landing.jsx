@@ -174,12 +174,15 @@ export default class Landing extends Component {
           style={{ height: "225px", width: "375px", border: "none" }}
         />
         <br />
+        <p>Project Gallery</p>
         <br />
         <div className="container" id="container">
           <div className="flip-container">
             <div className="flipper">
               <div className="front">
-                <img className="fill" src={chess} alt="" />
+                <a href="https://github.com/jmooree30/Chess" target="_blank">
+                  <img className="fill" src={chess} alt="" />
+                </a>
               </div>
               <div className="back">
                 <i className="devicon-ruby-plain colored" />
@@ -189,7 +192,12 @@ export default class Landing extends Component {
           <div className="flip-container">
             <div className="flipper">
               <div className="front">
-                <img className="fill" src={calc} alt="" />
+                <a
+                  href="https://github.com/jmooree30/calculator"
+                  target="_blank"
+                >
+                  <img className="fill" src={calc} alt="" />
+                </a>
               </div>
               <div className="back">
                 <i
@@ -202,7 +210,9 @@ export default class Landing extends Component {
           <div className="flip-container">
             <div className="flipper">
               <div className="front">
-                <img className="fill" src={cw} alt="" />
+                <a href="https://www.companywide.com" target="_blank">
+                  <img className="fill" src={cw} alt="" />
+                </a>
               </div>
               <div className="back">
                 <i className="devicon-meteor-plain colored" />
@@ -212,7 +222,9 @@ export default class Landing extends Component {
           <div className="flip-container">
             <div className="flipper">
               <div className="front">
-                <img className="fill" src={ss} alt="" />
+                <a href="https://jmooree30.github.io/canvas/" target="_blank">
+                  <img className="fill" src={game} alt="" />
+                </a>
               </div>
               <div className="back">
                 <i className="devicon-html5-plain colored" />
@@ -222,7 +234,12 @@ export default class Landing extends Component {
           <div className="flip-container">
             <div className="flipper">
               <div className="front">
-                <img className="fill" src={game} alt="" />
+                <a
+                  href="https://github.com/jmooree30/css-grid-framework"
+                  target="_blank"
+                >
+                  <img className="fill" src={ss} alt="" />
+                </a>
               </div>
               <div className="back">
                 <i className="devicon-css3-plain colored" />
@@ -232,7 +249,12 @@ export default class Landing extends Component {
           <div className="flip-container">
             <div className="flipper">
               <div className="front">
-                <img className="fill" src={book} alt="" />
+                <a
+                  href="https://fast-citadel-52170.herokuapp.com/"
+                  target="_blank"
+                >
+                  <img className="fill" src={book} alt="" />
+                </a>
               </div>
               <div className="back">
                 <i className="devicon-rails-plain colored" />
