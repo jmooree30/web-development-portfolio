@@ -122,7 +122,7 @@ export default class Landing extends Component {
     p.innerHTML = "";
     let n = 0;
     const str =
-      "Hello, I'm Jacob! I'm a Full Stack Web Developer from Boston, currently developing for a software company in Sioux Falls, South Dakota. Outside of work, I'm part of the moderation team at 'The Odin Project' and always enjoy helping new Web Developers reach their goals! ";
+      "Hello, I'm Jacob! I'm a Full Stack Web Developer from Boston, currently developing for Software Alternatives in Sioux Falls, South Dakota. Outside of work, I'm part of the moderation team at 'The Odin Project' and always enjoy helping new Web Developers reach their goals! ";
     let typeTimer = setInterval(function() {
       n = n + 1;
       p.innerHTML = "> " + str.slice(0, n);
