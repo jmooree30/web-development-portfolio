@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import resume from "../assets/Jacobs-Moore-Resume.pdf";
+import resume from "../assets/resume.pdf";
 import { HashLink as Link } from "react-router-hash-link";
 
 export default class Navbar extends Component {
