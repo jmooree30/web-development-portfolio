@@ -24,7 +24,6 @@
 /* Fake image */
 .fakeimg {
   background-image: url("../assets/bubble-code.jpg");
-  background-repeat: no-repeat;
   background-position: 0 -100px;
   width: 100%;
   height: 200px;
@@ -32,7 +31,6 @@
 
 .setimg {
   background-image: url("../assets/es6.jpeg");
-  background-repeat: no-repeat;
   background-position: center;
   height: 200px !important;
 }
