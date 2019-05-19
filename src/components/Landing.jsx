@@ -40,7 +40,8 @@ export default class Landing extends Component {
   }
 
   onClick(e) {
-    e.preventDefault();
+    const form = document.querySelector("form");
+    if (form.checkValidity()) { 
     let emailObj = {
       firstName: this.state.firstName,
       lastName: this.state.lastName,
@@ -63,6 +64,7 @@ export default class Landing extends Component {
         window.location.reload();
       })
       .catch(error => console.error("Error:", error));
+    }
   }
 
   handleScroll() {
@@ -332,7 +334,7 @@ export default class Landing extends Component {
         <br />
         <div id="fifty" />
         <div className="contact-container" id="max">
-          <form action="https://formspree.io/jmooree30@gmail.com" method="POST">
+          <form>
             <div className="input-container">
               <label>First Name</label>
               <br />
@@ -365,7 +367,6 @@ export default class Landing extends Component {
                 onChange={this.onChange}
                 type="text"
                 name="website"
-                required
               />
             </div>
             <div className="input-container">
@@ -375,7 +376,6 @@ export default class Landing extends Component {
                 onChange={this.onChange}
                 type="text"
                 name="company"
-                required
               />
             </div>
             <div className="input-container">
@@ -394,6 +394,7 @@ export default class Landing extends Component {
                 rows={5}
                 name="message"
                 cols={30}
+                required
               />
             </div>
             <button
@@ -401,7 +402,6 @@ export default class Landing extends Component {
               type="submit"
               name="submit"
               onClick={this.onClick}
-              required
             >
               &nbsp;&nbsp;&nbsp;
               <i class="fa fa-envelope">&nbsp;&nbsp;</i>
