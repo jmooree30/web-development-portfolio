@@ -42,22 +42,23 @@ export default class Landing extends Component {
   onClick(e) {
     const form = document.querySelector("form");
     if (form.checkValidity()) { 
-    let emailObj = {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      email: this.state.email,
-      company: this.state.company,
-      message: this.state.message,
-      website: this.state.website,
-      phone: this.state.phone
-    };
-    fetch("https://desolate-gorge-20931.herokuapp.com/api/email", {
-      method: "POST",
-      body: JSON.stringify(emailObj),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
+      e.preventDefault();
+      let emailObj = {
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        company: this.state.company,
+        message: this.state.message,
+        website: this.state.website,
+        phone: this.state.phone
+      };
+      fetch("https://desolate-gorge-20931.herokuapp.com/api/email", {
+        method: "POST",
+        body: JSON.stringify(emailObj),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
       .then(res => res.json())
       .then(response => {
         alert("message sent!");
