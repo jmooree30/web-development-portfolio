@@ -86,9 +86,9 @@ export default class Landing extends Component {
 
   isScrolledIntoView(el) {
     if (el.style.visibility != "visible") {
-      var elemTop = el.getBoundingClientRect().top;
-      var elemBottom = el.getBoundingClientRect().bottom;
-      var isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
+      const elemTop = el.getBoundingClientRect().top;
+      const elemBottom = el.getBoundingClientRect().bottom;
+      const isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
       return isVisible;
     }
   }
@@ -110,11 +110,13 @@ export default class Landing extends Component {
 
   componentDidMount() {
     const flipper = document.querySelectorAll(".flipper");
+    let counter = 0;
     setInterval(function() {
-      let random = Math.floor(Math.random() * 6);
-      flipper[random].className += " flip-it";
+      flipper[counter].className += " flip-it";
       setTimeout(function() {
-        flipper[random].className = " flipper";
+        flipper[counter].className = " flipper";
+        counter++;
+        if (counter === 6) counter = 0;
       }, 1500);
     }, 3000);
 
