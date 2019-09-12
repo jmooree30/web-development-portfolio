@@ -10,7 +10,7 @@ import calc from "../assets/calc.png";
 import alex from "../assets/alex.jpeg";
 import vlad from "../assets/vlad.jpeg";
 import game from "../assets/game.png";
-import hands from "../assets/hands.jpg";
+import webdev from "../assets/webdev.gif";
 import skills from "../assets/projects.gif";
 import prec from "../assets/prec.png";
 import portfolio from "../assets/portfolio.png";
@@ -117,7 +117,7 @@ export default class Landing extends Component {
           style={{ height: "300px", width: "300px", border: "none" }}
         />
         <br />
-        <p className="projects">PROJECTS</p>
+        <p className="header-text">PROJECTS</p>
         <br />
         <div className="container" id="container">
           <FlipContainer
@@ -229,10 +229,10 @@ export default class Landing extends Component {
         </div>
         <br />
         <br />
-        <div>Looking for a Web Developer?</div>
+        <div className="header-text">Looking for a Web Developer?</div>
         <br />
         <div className="hands-wrapper">
-          <img className="border-center" src={hands} />
+          <img className="border-center" src={webdev} />
         </div>
         <br />
         <br />
