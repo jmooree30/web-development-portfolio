@@ -115,7 +115,7 @@ export default class Landing extends Component {
           style={{ height: "300px", width: "300px", border: "none" }}
         />
         <br />
-        <p>PROJECTS</p>
+        <p className="projects">PROJECTS</p>
         <br />
         <div className="container" id="container">
           <FlipContainer
