@@ -14,20 +14,12 @@ import hands from "../assets/hands.jpg";
 import skills from "../assets/skills.png";
 
 export default class Landing extends Component {
-  constructor() {
-    super();
-    this.handleScroll = this.handleScroll.bind(this);
-    this.scrollEventHandler = this.scrollEventHandler.bind(this);
-    this.isScrolledIntoView = this.isScrolledIntoView.bind(this);
-    this.isScrolledIntoViewTwo = this.isScrolledIntoViewTwo.bind(this);
-  }
-
-  handleScroll() {
+  handleScroll = () => {
     this.scrollEventHandler("first-recomend", "fr");
     this.scrollEventHandler("second-recomend", "sr");
-  }
+  };
 
-  scrollEventHandler(element, direction) {
+  scrollEventHandler = (element, direction) => {
     if (this.isScrolledIntoViewTwo(document.getElementById(`${element}`))) {
       let view = document.getElementById(`${element}`);
       if (direction == "fr") {
@@ -39,17 +31,17 @@ export default class Landing extends Component {
         view.style.visibility = "visible";
       }
     }
-  }
+  };
 
-  isScrolledIntoView(el) {
+  isScrolledIntoView = el => {
     if (el.style.visibility != "visible") {
       const elemTop = el.getBoundingClientRect().top;
       const elemBottom = el.getBoundingClientRect().bottom;
       const isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
       return isVisible;
     }
-  }
-  isScrolledIntoViewTwo(el) {
+  };
+  isScrolledIntoViewTwo = el => {
     if (el.style.visibility != "visible") {
       const elemTop = el.getBoundingClientRect().top;
       const elemBottom = el.getBoundingClientRect().bottom;
@@ -63,7 +55,7 @@ export default class Landing extends Component {
       }
       return isVisible;
     }
-  }
+  };
 
   componentDidMount() {
     const p = document.getElementById("text");
