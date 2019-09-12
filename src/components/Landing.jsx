@@ -10,7 +10,7 @@ import vlad from "../assets/vlad.jpeg";
 import game from "../assets/game.png";
 import hands from "../assets/hands.jpg";
 import skills from "../assets/skills.png";
-import GitHubCalendar from "github-calendar";
+import GithubCalendar from "./GithubCalendar";
 
 export default class Landing extends Component {
   constructor() {
@@ -131,14 +131,6 @@ export default class Landing extends Component {
         }, 500);
       }
     }, 45);
-
-    new GitHubCalendar(".calendar", "jmooree30", { responsive: true });
-    window.scrollTo(0, 0);
-    let firstRecomend = document.getElementById("first-recomend");
-    let secondRecomend = document.getElementById("second-recomend");
-    firstRecomend.style.visibility = "hidden";
-    secondRecomend.style.visibility = "hidden";
-    window.addEventListener("scroll", this.handleScroll);
   }
 
   componentWillUnmount() {
@@ -204,12 +196,7 @@ export default class Landing extends Component {
             url="https://fast-citadel-52170.herokuapp.com/"
           ></FlipContainer>
         </div>
-        <link
-          rel="stylesheet"
-          href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"
-        />
-        <div className="calendar">Loading the data just for you.</div>
-
+        <GithubCalendar></GithubCalendar>
         <br />
         <br />
         <div className="container testimonials">
