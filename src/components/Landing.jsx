@@ -108,17 +108,6 @@ export default class Landing extends Component {
   }
 
   componentDidMount() {
-    const flipper = document.querySelectorAll(".flipper");
-    let counter = 0;
-    setInterval(function() {
-      flipper[counter].className += " flip-it";
-      setTimeout(function() {
-        flipper[counter].className = " flipper";
-        counter++;
-        if (counter === 6) counter = 0;
-      }, 1500);
-    }, 3000);
-
     const p = document.getElementById("text");
     p.innerHTML = "";
     let n = 0;
