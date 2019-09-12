@@ -1,17 +1,13 @@
 import React, { Component } from "react";
+import FlipContainer from "./FlipContainer";
 import cw from "../assets/cw.png";
 import ss from "../assets/ss.png";
 import chess from "../assets/chess.png";
 import book from "../assets/book.png";
 import calc from "../assets/calc.png";
-import git from "../assets/git.png";
-import bubbleBlog from "../assets/bubble-blog.jpg";
 import alex from "../assets/alex.jpeg";
 import vlad from "../assets/vlad.jpeg";
-import mern from "../assets/mern.jpg";
 import game from "../assets/game.png";
-import { HashLink as Link } from "react-router-hash-link";
-import fancyMac from "../assets/fancy-mac.jpg";
 import hands from "../assets/hands.jpg";
 import skills from "../assets/skills.png";
 import GitHubCalendar from "github-calendar";
@@ -41,7 +37,7 @@ export default class Landing extends Component {
 
   onClick(e) {
     const form = document.querySelector("form");
-    if (form.checkValidity()) { 
+    if (form.checkValidity()) {
       e.preventDefault();
       let emailObj = {
         firstName: this.state.firstName,
@@ -59,12 +55,12 @@ export default class Landing extends Component {
           "Content-Type": "application/json"
         }
       })
-      .then(res => res.json())
-      .then(response => {
-        alert("message sent!");
-        window.location.reload();
-      })
-      .catch(error => console.error("Error:", error));
+        .then(res => res.json())
+        .then(response => {
+          alert("message sent!");
+          window.location.reload();
+        })
+        .catch(error => console.error("Error:", error));
     }
   }
 
@@ -182,90 +178,42 @@ export default class Landing extends Component {
         <p>Project Gallery</p>
         <br />
         <div className="container" id="container">
-          <div className="flip-container">
-            <div className="flipper">
-              <div className="front">
-                <a href="https://github.com/jmooree30/Chess" target="_blank">
-                  <img className="fill" src={chess} alt="" />
-                </a>
-              </div>
-              <div className="back">
-                <i className="devicon-ruby-plain colored" />
-              </div>
-            </div>
-          </div>
-          <div className="flip-container">
-            <div className="flipper">
-              <div className="front">
-                <a
-                  href="https://github.com/jmooree30/calculator"
-                  target="_blank"
-                >
-                  <img className="fill" src={calc} alt="" />
-                </a>
-              </div>
-              <div className="back">
-                <i
-                  className="devicon-javascript-plain"
-                  style={{ color: "orange" }}
-                />
-              </div>
-            </div>
-          </div>
-          <div className="flip-container">
-            <div className="flipper">
-              <div className="front">
-                <a href="https://www.companywide.com" target="_blank">
-                  <img className="fill" src={cw} alt="" />
-                </a>
-              </div>
-              <div className="back">
-                <i className="devicon-meteor-plain colored" />
-              </div>
-            </div>
-          </div>
-          <div className="flip-container">
-            <div className="flipper">
-              <div className="front">
-                <a href="https://jmooree30.github.io/canvas/" target="_blank">
-                  <img className="fill" src={game} alt="" />
-                </a>
-              </div>
-              <div className="back">
-                <i className="devicon-html5-plain colored" />
-              </div>
-            </div>
-          </div>
-          <div className="flip-container">
-            <div className="flipper">
-              <div className="front">
-                <a
-                  href="https://github.com/jmooree30/css-grid-framework"
-                  target="_blank"
-                >
-                  <img className="fill" src={ss} alt="" />
-                </a>
-              </div>
-              <div className="back">
-                <i className="devicon-css3-plain colored" />
-              </div>
-            </div>
-          </div>
-          <div className="flip-container">
-            <div className="flipper">
-              <div className="front">
-                <a
-                  href="https://fast-citadel-52170.herokuapp.com/"
-                  target="_blank"
-                >
-                  <img className="fill" src={book} alt="" />
-                </a>
-              </div>
-              <div className="back">
-                <i className="devicon-rails-plain colored" />
-              </div>
-            </div>
-          </div>
+          <FlipContainer
+            project={chess}
+            icon="devicon-ruby-plain colored"
+            url="https://github.com/jmooree30/Chess"
+          ></FlipContainer>
+
+          <FlipContainer
+            project={calc}
+            icon="devicon-javascript-plain"
+            style="orange"
+            url="https://github.com/jmooree30/calculator"
+          ></FlipContainer>
+
+          <FlipContainer
+            project={cw}
+            icon="devicon-meteor-plain colored"
+            url="https://www.companywide.com"
+          ></FlipContainer>
+
+          <FlipContainer
+            project={game}
+            icon="devicon-html5-plain colored"
+            url="https://jmooree30.github.io/canvas/"
+          ></FlipContainer>
+
+          <FlipContainer
+            project={ss}
+            icon="devicon-css3-plain colored"
+            url="https://github.com/jmooree30/css-grid-framework"
+          ></FlipContainer>
+
+          <FlipContainer
+            project={book}
+            icon="devicon-rails-plain colored"
+            url="https://fast-citadel-52170.herokuapp.com/"
+          ></FlipContainer>
         </div>
         <link
           rel="stylesheet"
@@ -364,20 +312,12 @@ export default class Landing extends Component {
             <div className="input-container">
               <label>Website</label>
               <br />
-              <input
-                onChange={this.onChange}
-                type="text"
-                name="website"
-              />
+              <input onChange={this.onChange} type="text" name="website" />
             </div>
             <div className="input-container">
               <label>Company</label>
               <br />
-              <input
-                onChange={this.onChange}
-                type="text"
-                name="company"
-              />
+              <input onChange={this.onChange} type="text" name="company" />
             </div>
             <div className="input-container">
               <label>Email</label>
