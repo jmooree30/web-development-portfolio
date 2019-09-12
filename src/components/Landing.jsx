@@ -12,6 +12,7 @@ import vlad from "../assets/vlad.jpeg";
 import game from "../assets/game.png";
 import hands from "../assets/hands.jpg";
 import skills from "../assets/skills.png";
+import prec from "../assets/prec.png";
 
 export default class Landing extends Component {
   handleScroll = () => {
@@ -151,6 +152,12 @@ export default class Landing extends Component {
             project={book}
             icon="devicon-rails-plain colored"
             url="https://fast-citadel-52170.herokuapp.com/"
+          ></FlipContainer>
+
+          <FlipContainer
+            project={prec}
+            icon="devicon-vuejs-plain colored"
+            url="https://www.precisionreloading.com/checkout"
           ></FlipContainer>
         </div>
         <GithubCalendar></GithubCalendar>
