@@ -11,8 +11,9 @@ import alex from "../assets/alex.jpeg";
 import vlad from "../assets/vlad.jpeg";
 import game from "../assets/game.png";
 import hands from "../assets/hands.jpg";
-import skills from "../assets/skills.png";
+import skills from "../assets/projects.gif";
 import prec from "../assets/prec.png";
+import portfolio from "../assets/portfolio.png";
 
 export default class Landing extends Component {
   handleScroll = () => {
@@ -111,10 +112,10 @@ export default class Landing extends Component {
         <br />
         <img
           src={skills}
-          style={{ height: "225px", width: "375px", border: "none" }}
+          style={{ height: "300px", width: "300px", border: "none" }}
         />
         <br />
-        <p>Project Gallery</p>
+        <p>PROJECTS</p>
         <br />
         <div className="container" id="container">
           <FlipContainer
@@ -158,6 +159,12 @@ export default class Landing extends Component {
             project={prec}
             icon="devicon-vuejs-plain colored"
             url="https://www.precisionreloading.com/checkout"
+          ></FlipContainer>
+
+          <FlipContainer
+            project={portfolio}
+            icon="devicon-react-original colored"
+            url="https://jacobmoore.netlify.com/"
           ></FlipContainer>
         </div>
         <GithubCalendar></GithubCalendar>
