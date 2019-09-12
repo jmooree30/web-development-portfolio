@@ -131,6 +131,13 @@ export default class Landing extends Component {
         }, 500);
       }
     }, 45);
+
+    window.scrollTo(0, 0);
+    let firstRecomend = document.getElementById("first-recomend");
+    let secondRecomend = document.getElementById("second-recomend");
+    firstRecomend.style.visibility = "hidden";
+    secondRecomend.style.visibility = "hidden";
+    window.addEventListener("scroll", this.handleScroll);
   }
 
   componentWillUnmount() {

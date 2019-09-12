@@ -4,12 +4,6 @@ import GitHubCalendar from "github-calendar";
 class GithubCalendar extends Component {
   componentDidMount() {
     new GitHubCalendar(".calendar", "jmooree30", { responsive: true });
-    window.scrollTo(0, 0);
-    let firstRecomend = document.getElementById("first-recomend");
-    let secondRecomend = document.getElementById("second-recomend");
-    firstRecomend.style.visibility = "hidden";
-    secondRecomend.style.visibility = "hidden";
-    window.addEventListener("scroll", this.handleScroll);
   }
   render() {
     return (
