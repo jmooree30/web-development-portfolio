@@ -238,49 +238,15 @@ i[class^="devicon"] {
   padding: 25px 25px !important;
 }
 
-#black {
-  color: black !important;
-}
-
 #white {
   color: white !important;
   font-size: 16px;
-}
-
-.html {
-  color: #e34f26;
-  font-weight: bold;
-}
-
-.css {
-  color: #1aa3ff;
-  font-weight: bold;
 }
 
 .container {
   width: 80%;
   margin: auto;
   overflow: hidden;
-}
-
-.heroku {
-  color: purple;
-  font-weight: bold;
-}
-
-.ruby {
-  color: #cc342d;
-  font-weight: bold;
-}
-
-.javascript {
-  color: orange;
-  font-weight: bold;
-}
-
-.git {
-  color: black;
-  font-weight: bold;
 }
 
 .navbar {
@@ -308,37 +274,6 @@ i[class^="devicon"] {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-}
-
-@keyframes react-logo {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.header {
-  position: relative;
-  font-family: "Fjalla One" !important;
-  letter-spacing: 4px;
-  color: black;
-}
-.mini-header {
-  font-size: 16px;
-  font-family: "Fjalla One" !important;
-  letter-spacing: 2px;
-  color: black;
-}
-
-.content {
-  font-size: 24px;
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 10px;
-  line-height: 1.5;
-  text-shadow: 2px 2px 4px #000000;
 }
 
 .elipse {
