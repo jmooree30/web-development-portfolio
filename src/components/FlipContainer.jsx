@@ -27,6 +27,9 @@ class FlipContainer extends Component {
               className={this.props.icon}
               style={{ color: this.props.style }}
             />
+            {this.props.source && (
+              <img class="missingDevicon" src={this.props.source}></img>
+            )}
           </div>
         </div>
       </div>

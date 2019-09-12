@@ -14,6 +14,8 @@ import hands from "../assets/hands.jpg";
 import skills from "../assets/projects.gif";
 import prec from "../assets/prec.png";
 import portfolio from "../assets/portfolio.png";
+import gameboy from "../assets/gameboy.png";
+import z80 from "../assets/z80.Default";
 
 export default class Landing extends Component {
   handleScroll = () => {
@@ -165,6 +167,12 @@ export default class Landing extends Component {
             project={portfolio}
             icon="devicon-react-original colored"
             url="https://jacobmoore.netlify.com/"
+          ></FlipContainer>
+
+          <FlipContainer
+            project={gameboy}
+            url="https://github.com/jmooree30/GBZ80-ASM-Gameboy-Project"
+            source={z80}
           ></FlipContainer>
         </div>
         <GithubCalendar></GithubCalendar>
