@@ -9,7 +9,7 @@ class FlipContainer extends Component {
       setTimeout(function() {
         flipper[counter].className = " flipper";
         counter++;
-        if (counter === 6) counter = 0;
+        if (counter === flipper.length) counter = 0;
       }, 1500);
     }, 3000);
   }
