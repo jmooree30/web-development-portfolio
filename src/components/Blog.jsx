@@ -26,7 +26,7 @@ export default class Blog extends Component {
               </Link>
             </div>
             <div className="card">
-              <h2>Dissecting a Bubble Sort</h2>
+              <h2>Javascript Sorting Algorithms: Bubble Sort</h2>
               <h5>Date - sept 1, 2018</h5>
               <Link to={"/bubble"}>
                 <div className="fakeimg" style={{ height: 200 }} />

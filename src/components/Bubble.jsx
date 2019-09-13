@@ -50,7 +50,7 @@ class Bubble extends Component {
           <div className="header-wrapper">
             <div className="white">
               <h1 className="blog-header">
-                Javascript Sorting Algorithms: Dissecting a bubble sort
+                Javascript Sorting Algorithms: Bubble sort
               </h1>
               <i className="bubble-quote">
                 "Bubble sort is a simple sorting algorithm that repeatedly steps
@@ -93,35 +93,41 @@ class Bubble extends Component {
             <br />
             <br />
             <p className="text">
+              This post will be the first of a series on Javascript sorting
+              algorithms. A bubble sort is usually a good introduction to
+              sorting algorithms, as it's relatively simple to understand and
+              implement. The algorithm works by iterating through the array and
+              "bubbling" up values to their correct position.
+            </p>
+            <br />
+            <p className="text">
               As you can see in the animation above, the array being sorted is
-              the worst case scenario with a time complexity of O(n^2) with the
-              largest number (9) being the first element and the rest in
-              descending order. The first step in the algorithm is to check if
-              the array's length is less than or equal to 1. If it is, return
-              the array since it's already sorted.
+              the worst case possible scenario, with a time complexity of O(n^2)
+              with the largest number 9 being the first element, and the rest in
+              descending order. Bubble sort with only be Ω(n) when the array is
+              already sorted.
             </p>
             <br />
-            <p className="text">
-              The following step starts a while loop that will continue to run
-              until the "sorted" variable is equal to true. Following the while
-              loop we initialize a for loop for the length of the given array.
-              Right after initializing this loop, the sorted variable is set to
-              true. The first iteration in the for loop compares the values of
-              arr[0] and arr[1]. Since arr[0] is greater than arr[1] the swap
-              occurs 'bubbling' up the 9 into the arr[1] position. The second
-              iteration will then compare arr[1] against arr[2] and the same
-              sequence will occur.{" "}
-            </p>
+            <h2>Time Complexity</h2>
+            <table>
+              <tr>
+                <th>Best</th>
+                <th>Average</th>
+                <th>Worst</th>
+              </tr>
+              <tr>
+                <td>Ω(n)</td>
+                <td>θ(n^2)</td>
+                <td>O(n^2)</td>
+              </tr>
+            </table>
             <br />
-            <p className="text">
-              If any of the iterations resulted in a swap then the "sorted"
-              variable will be set to false. As long as this variable is false
-              the while loop will continue to iterate. Finally if a full scan
-              through the array makes zero swaps then the sorted variable will
-              have a true value and the loop will end, returning a sorted array.{" "}
-            </p>
-            <br />
-            <pre><code>{`
+            <pre>
+              <code>{`
+// Javascript implementation
+
+let unsortedArr = [9,8,7,6,5,4,3,2,1];
+
 function bubbleSort(arr) {
   if (arr.length === 1) return arr;    
   let swapped = false; 
@@ -137,22 +143,24 @@ function bubbleSort(arr) {
   };
   return arr; 
 }
-              `}</code></pre>
+
+bubbleSort(unsortedArr) // [1,2,3,4,5,6,7,8,9]
+              `}</code>
+            </pre>
             <br />
             <h2>Pseudo Code</h2>
             <ol className="bubble-ordered text">
-              <li className="bubble-list">
-                Check if arrays length is one.
-              </li>
+              <li className="bubble-list">Check if arrays length is one.</li>
               <li className="bubble-list">
                 If it is, return the array, it's already sorted.
               </li>
               <li className="bubble-list">
-                If not, initialize a variable and set it to false. This will be used in the 
-                next step.
+                If not, initialize a variable and set it to false. This will be
+                used in the next step.
               </li>
               <li className="bubble-list">
-                Use a loop to continue iteration while the above variable is false.
+                Use a loop to continue iteration while the above variable is
+                false.
               </li>
               <li className="bubble-list">
                 Inside our while loop, scan through the array to be sorted.
@@ -162,13 +170,13 @@ function bubbleSort(arr) {
                 elements and set our swapped value to true.
               </li>
               <li className="bubble-list">
-                Continue this process, "bubbling" up the largest element to it's correct
-                sorted position on each iteration.
+                Continue this process, "bubbling" up the largest element to it's
+                correct sorted position on each iteration.
               </li>
               <li className="bubble-list">
-                Once the array is sorted, on the functions last iteration, it will
-                skip setting the swapped variable to true therefore ending the while 
-                loop and returning the sorted array. 
+                Once the array is sorted, on the functions last iteration, it
+                will skip setting the swapped variable to true therefore ending
+                the while loop and returning the sorted array.
               </li>
             </ol>
             <br />

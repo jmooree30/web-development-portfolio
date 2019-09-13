@@ -84,7 +84,7 @@ export default class Landing extends Component {
           }
         }, 500);
       }
-    }, 45);
+    }, 20);
 
     window.scrollTo(0, 0);
     let firstRecomend = document.getElementById("first-recomend");
