@@ -26,11 +26,11 @@ export default class Landing extends Component {
   scrollEventHandler = (element, direction) => {
     if (this.isScrolledIntoViewTwo(document.getElementById(`${element}`))) {
       let view = document.getElementById(`${element}`);
-      if (direction == "fr") {
+      if (direction === "fr") {
         view.dataset.fr = "1";
         view.style.visibility = "visible";
       }
-      if (direction == "sr") {
+      if (direction === "sr") {
         view.dataset.fr = "1";
         view.style.visibility = "visible";
       }
@@ -38,7 +38,7 @@ export default class Landing extends Component {
   };
 
   isScrolledIntoView = el => {
-    if (el.style.visibility != "visible") {
+    if (el.style.visibility !== "visible") {
       const elemTop = el.getBoundingClientRect().top;
       const elemBottom = el.getBoundingClientRect().bottom;
       const isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
@@ -46,7 +46,7 @@ export default class Landing extends Component {
     }
   };
   isScrolledIntoViewTwo = el => {
-    if (el.style.visibility != "visible") {
+    if (el.style.visibility !== "visible") {
       const elemTop = el.getBoundingClientRect().top;
       const elemBottom = el.getBoundingClientRect().bottom;
       const isMobile =
@@ -107,7 +107,7 @@ export default class Landing extends Component {
               <span className="controls yellow" />
               <span className="controls green" />
             </div>
-            <div class="cmd" id="text" />
+            <div className="cmd" id="text" />
           </div>
           <div className="background-image" />
         </div>
@@ -115,6 +115,7 @@ export default class Landing extends Component {
         <img
           src={skills}
           style={{ height: "300px", width: "300px", border: "none" }}
+          alt=""
         />
         <br />
         <p className="header-text">PROJECTS</p>
@@ -129,7 +130,7 @@ export default class Landing extends Component {
           <FlipContainer
             project={calc}
             icon="devicon-javascript-plain"
-            style="orange"
+            color="orange"
             url="https://github.com/jmooree30/calculator"
           ></FlipContainer>
 
@@ -180,7 +181,7 @@ export default class Landing extends Component {
         <br />
         <div className="container testimonials">
           <div className="recomendation-wrapper" id="first-recomend">
-            <img className="recomendation-image" src={alex} />
+            <img className="recomendation-image" src={alex} alt="" />
             <br />
             <i className="recomendation-text">
               "Jacob is one of the hardest working web developers I have met.
@@ -206,7 +207,7 @@ export default class Landing extends Component {
           <br />
           <br />
           <div className="recomendation-wrapper" id="second-recomend">
-            <img className="recomendation-image" src={vlad} />
+            <img className="recomendation-image" src={vlad} alt="" />
             <br />
             <i className="recomendation-text">
               "I worked with Jacob on numerous projects at the Odin Project an
@@ -232,7 +233,7 @@ export default class Landing extends Component {
         <div className="header-text">Looking for a Web Developer?</div>
         <br />
         <div className="hands-wrapper">
-          <img className="border-center" src={webdev} />
+          <img className="border-center" src={webdev} alt="" />
         </div>
         <br />
         <br />

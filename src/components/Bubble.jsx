@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "../styles/bubble.css";
 import Comments from "./Comments";
-import bubbles from "../assets/bubbles.jpg";
 class Bubble extends Component {
   constructor() {
     super();
@@ -36,7 +35,7 @@ class Bubble extends Component {
       that.setState({ arr: arr });
       that.state.counter += 1;
       // Amount or iterations for worst case 1-9 to be sorted (72)
-      if (that.state.counter == 72) {
+      if (that.state.counter === 72) {
         clearInterval(timer);
         that.state.counter = 0;
         return;
@@ -92,7 +91,7 @@ class Bubble extends Component {
             <button
               onClick={this.handleClick}
               className="btn-md btn-info bubble-button"
-              disabled={this.state.counter != 71}
+              disabled={this.state.counter !== 71}
             >
               Watch again
             </button>

@@ -114,7 +114,7 @@ class Contact extends Component {
               onClick={this.onClick}
             >
               &nbsp;&nbsp;&nbsp;
-              <i class="fa fa-envelope">&nbsp;&nbsp;</i>
+              <i className="fa fa-envelope">&nbsp;&nbsp;</i>
             </button>
           </form>
         </div>

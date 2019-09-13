@@ -43,6 +43,7 @@ export default class Blog extends Component {
                   height: "110px",
                   width: "130px"
                 }}
+                alt=""
               />
               <div className="blog-about-me-text">
                 Full Stack Web Developer from Boston, MA. If I'm not
@@ -52,18 +53,24 @@ export default class Blog extends Component {
             <div className="card">
               <h3>Follow Me</h3>
               <p>
-                <a href="https://github.com/Jmooree30" target="_blank">
+                <a
+                  href="https://github.com/Jmooree30"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fa fa-github" style={{ color: "green" }} />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/jacob-moore-2602b315b/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="fa fa-linkedin" style={{ color: "blue" }} />
                 </a>
                 <a
                   href="https://www.instagram.com/showmethecodez/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i className="fa fa-instagram" style={{ color: "purple" }} />
                 </a>

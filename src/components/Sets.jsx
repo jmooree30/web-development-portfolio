@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "../styles/bubble.css";
-import bubbleCode from "../assets/bubble-code.jpg";
 import Comments from "./Comments";
-import bubbles from "../assets/bubbles.jpg";
 class Sets extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -50,8 +48,7 @@ class Sets extends Component {
               Arrays are iterable, indexed collections of data that can contain
               whatever data types you want. <br />
               <br />
-              <pre
-              >{`let arr = [undefined, null, "string", 3, {key:"value"}, [1,2,3]];
+              <pre>{`let arr = [undefined, null, "string", 3, {key:"value"}, [1,2,3]];
 
 let arr1 = new Array(undefined, null, "string", 3, {key:"value"}, [1,2,3]);
 
@@ -69,8 +66,7 @@ let arr2 = Array.from("123"); // [ '1', '2', '3' ]
               unique values, no duplicates.
               <br />
               <br />
-              <pre
-              >{`let set = new Set([undefined, null, "string", 3, {key:"value"}, [1,2,3]]);
+              <pre>{`let set = new Set([undefined, null, "string", 3, {key:"value"}, [1,2,3]]);
 
 let set1 = new Set('123') // Set { '1', '2', '3' }
 

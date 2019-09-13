@@ -28,6 +28,7 @@ export default class Navbar extends Component {
                 <a
                   href="https://github.com/jmooree30"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="navv"
                 >
                   GITHUB

@@ -8,16 +8,17 @@ class Comments extends Component {
       name: "",
       comment: ""
     };
-    this.onChange = this.onChange.bind(this);
-    this.onClick = this.onClick.bind(this);
   }
+
   componentDidMount() {
     this.getComments(this.props.type);
   }
-  onChange(e) {
+
+  onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
-  }
-  onClick(e) {
+  };
+
+  onClick = e => {
     let commentObj = {
       comment: this.state.comment,
       name: this.state.name,
@@ -37,7 +38,8 @@ class Comments extends Component {
         this.setState({ comments: comments });
       })
       .catch(error => console.error("Error:", error));
-  }
+  };
+
   getComments = type => {
     fetch("https://desolate-gorge-20931.herokuapp.com/api/comments")
       .then(res => res.json())
@@ -51,6 +53,7 @@ class Comments extends Component {
         this.setState({ comments: commentsArr.reverse() });
       });
   };
+
   render() {
     let comments = this.state.comments;
     return (
