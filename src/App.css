@@ -388,6 +388,11 @@ a {
   color: white !important;
 }
 
+pre {
+  text-align: left;
+  font-weight: bolder;
+}
+
 i[class^="fa"] {
   padding: 0 15px;
   font-size: 24px;

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../styles/bubble.css";
-import bubbleCode from "../assets/bubble-code.jpg";
 import Comments from "./Comments";
 import bubbles from "../assets/bubbles.jpg";
 class Bubble extends Component {
@@ -122,36 +121,54 @@ class Bubble extends Component {
               have a true value and the loop will end, returning a sorted array.{" "}
             </p>
             <br />
-            <img className="bubble-code" src={bubbleCode} />
+            <pre><code>{`
+function bubbleSort(arr) {
+  if (arr.length === 1) return arr;    
+  let swapped = false; 
+  while(!swapped) { 
+    arr.forEach((e, i) => {
+      if (arr[i] > arr[i+1]) {
+        let temp= arr[i];
+        arr[i] = arr[i+1];
+        arr[i+1] = temp;
+        swapped = true;
+      }
+    });
+  };
+  return arr; 
+}
+              `}</code></pre>
             <br />
             <h2>Pseudo Code</h2>
             <ol className="bubble-ordered text">
               <li className="bubble-list">
-                Check if array.length is less than one.
+                Check if arrays length is one.
               </li>
               <li className="bubble-list">
-                If it is return the array, it's sorted
+                If it is, return the array, it's already sorted.
               </li>
               <li className="bubble-list">
-                If not initialize a variable and set it to false
+                If not, initialize a variable and set it to false. This will be used in the 
+                next step.
               </li>
               <li className="bubble-list">
-                Create a "while variable is equal to false" loop
+                Use a loop to continue iteration while the above variable is false.
               </li>
               <li className="bubble-list">
-                Initialize a for loop for the length of the array
-              </li>
-              <li className="bubble-list">
-                Set the sorted variable to true before any conditions are
-                checked
+                Inside our while loop, scan through the array to be sorted.
               </li>
               <li className="bubble-list">
                 If the array[index] is greater than array[index +1] swap the
-                elements and set sorted to false
+                elements and set our swapped value to true.
               </li>
               <li className="bubble-list">
-                Once elements are sorted and variable boolean is true, return
-                the sorted array
+                Continue this process, "bubbling" up the largest element to it's correct
+                sorted position on each iteration.
+              </li>
+              <li className="bubble-list">
+                Once the array is sorted, on the functions last iteration, it will
+                skip setting the swapped variable to true therefore ending the while 
+                loop and returning the sorted array. 
               </li>
             </ol>
             <br />
