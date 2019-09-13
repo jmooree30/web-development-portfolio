@@ -14,14 +14,19 @@ class Bubble extends Component {
     window.scrollTo(0, 0);
     this.bubbleSort(this.state.arr, 0, 0);
   }
+
+  // Reset the array back to unsorted and re-sort
   handleClick = event => {
     let arr = [9, 8, 7, 6, 5, 4, 3, 2, 1];
     this.setState({ arr: arr });
     this.bubbleSort(arr, 0);
   };
+
+  // Sorting animation
   bubbleSort(arr, num) {
     let that = this;
     let timer = setInterval(function() {
+      // Perform a swap if first element is greater than the next
       if (arr[num] > arr[num + 1]) {
         let a = arr[num];
         let b = arr[num + 1];
@@ -30,6 +35,7 @@ class Bubble extends Component {
       }
       that.setState({ arr: arr });
       that.state.counter += 1;
+      // Amount or iterations for worst case 1-9 to be sorted (72)
       if (that.state.counter == 72) {
         clearInterval(timer);
         that.state.counter = 0;
