@@ -167,7 +167,7 @@ export default class Landing extends Component {
           <FlipContainer
             project={portfolio}
             icon="devicon-react-original colored"
-            url="https://jacobmoore.netlify.com/"
+            url="https://github.com/jmooree30/portfolio"
           ></FlipContainer>
 
           <FlipContainer
