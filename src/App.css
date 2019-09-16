@@ -6,19 +6,22 @@
 @media (max-width: 1024px) {
   body,
   html {
+    margin: 0;
     overflow: auto !important;
     max-height: 100% !important;
+    min-height: 100% !important;
   }
 }
 
 body {
   padding: 0;
-  margin: 0;
+  margin: 0 !important;
   height: 100%;
   max-width: 100%;
 }
 
 h1 {
+  margin: 0;
   text-align: center;
 }
 
@@ -273,6 +276,7 @@ i[class^="devicon"] {
   border-bottom: 1px solid grey !important;
   margin-bottom: 0 !important;
   background: white;
+  transition: all .7s ease 0s;
 }
 
 .underline {
@@ -280,7 +284,6 @@ i[class^="devicon"] {
 }
 
 .top-container {
-  margin-top: 50px;
   color: white;
   font-size: 45px;
   text-align: center;

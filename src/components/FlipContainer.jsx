@@ -25,7 +25,7 @@ class FlipContainer extends Component {
           <div className="back">
             <i
               className={this.props.icon}
-              color={{ color: this.props.style }}
+              style={{ color: this.props.style }}
             />
             {this.props.source && (
               <img

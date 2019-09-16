@@ -3,9 +3,22 @@ import resume from "../assets/resume.pdf";
 import { HashLink as Link } from "react-router-hash-link";
 
 export default class Navbar extends Component {
+  constructor() {
+    super();
+    this.state = {
+      scrolled:false
+    };
+  }
+
+  componentDidMount() {
+     window.addEventListener("scroll", () => {
+       this.setState({scrolled: true});
+     })
+  }
+
   render() {
     return (
-      <nav className="navbar navbar-default navbar-fixed-top">
+      <nav className="navbar navbar-default navbar-fixed-top" style={{top: this.state.scrolled ? 0 : -75 }}>
         <div className="container-fluid">
           <div className="navbar-header">
             <button
