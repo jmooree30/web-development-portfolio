@@ -11,9 +11,21 @@ export default class Navbar extends Component {
   }
 
   componentDidMount() {
+    const root = "https://jacobmoore.netlify.com/";
+
+    if (process.env.NODE_ENV !== 'production') {
+      this.setState({scrolled: true});
+    }
+
      window.addEventListener("scroll", () => {
-       this.setState({scrolled: true});
-     })
+        if (window.location.href === root) { 
+          this.setState({scrolled: true});
+        }
+     });
+
+    if (window.location.href !== root) { 
+      this.setState({scrolled: true});
+    }
   }
 
   render() {
