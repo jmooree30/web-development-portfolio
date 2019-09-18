@@ -276,7 +276,7 @@ i[class^="devicon"] {
   border-bottom: 1px solid grey !important;
   margin-bottom: 0 !important;
   background: white;
-  transition: all .7s ease 0s;
+  transition: all 0.7s ease 0s;
 }
 
 .underline {
@@ -314,6 +314,7 @@ i[class^="devicon"] {
   background-size: cover;
   position: relative;
   z-index: -1;
+  filter: blur(2px);
 }
 
 .background-image-bubble {
