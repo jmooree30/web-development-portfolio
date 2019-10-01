@@ -6,31 +6,31 @@ export default class Navbar extends Component {
   constructor() {
     super();
     this.state = {
-      scrolled:false
+      scrolled: false
     };
   }
 
   componentDidMount() {
-    const root = "https://jacobmoore.netlify.com/";
+    const root = "https://jacobmoore.dev";
 
     if (process.env.NODE_ENV !== 'production') {
-      this.setState({scrolled: true});
+      this.setState({ scrolled: true });
     }
 
-     window.addEventListener("scroll", () => {
-        if (window.location.href === root) { 
-          this.setState({scrolled: true});
-        }
-     });
+    window.addEventListener("scroll", () => {
+      if (window.location.href === root) {
+        this.setState({ scrolled: true });
+      }
+    });
 
-    if (window.location.href !== root) { 
-      this.setState({scrolled: true});
+    if (window.location.href !== root) {
+      this.setState({ scrolled: true });
     }
   }
 
   render() {
     return (
-      <nav className="navbar navbar-default navbar-fixed-top" style={{top: this.state.scrolled ? 0 : -75 }}>
+      <nav className="navbar navbar-default navbar-fixed-top" style={{ top: this.state.scrolled ? 0 : -75 }}>
         <div className="container-fluid">
           <div className="navbar-header">
             <button
