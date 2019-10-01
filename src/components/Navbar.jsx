@@ -11,9 +11,9 @@ export default class Navbar extends Component {
   }
 
   componentDidMount() {
-    const root = "https://jacobmoore.dev";
+    const root = "https://jacobmoore.dev/";
 
-    if (process.env.NODE_ENV !== 'production') {
+    if (process.env.NODE_ENV !== "production") {
       this.setState({ scrolled: true });
     }
 
@@ -30,7 +30,10 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-default navbar-fixed-top" style={{ top: this.state.scrolled ? 0 : -75 }}>
+      <nav
+        className="navbar navbar-default navbar-fixed-top"
+        style={{ top: this.state.scrolled ? 0 : -75 }}
+      >
         <div className="container-fluid">
           <div className="navbar-header">
             <button
