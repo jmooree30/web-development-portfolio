@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import FlipContainer from "./FlipContainer";
-import GithubCalendar from "./GithubCalendar";
 import Contact from "./Contact";
 import cw from "../assets/cw.png";
 import ss from "../assets/ss.png";
@@ -66,7 +65,7 @@ export default class Landing extends Component {
     p.innerHTML = "";
     let n = 0;
     const str =
-      "Hello, I'm Jacob! I'm a Full Stack Web Developer from Boston, currently developing for Software Alternatives in Sioux Falls, South Dakota. Outside of work, I'm part of the moderation team at 'The Odin Project' and always enjoy helping new Web Developers reach their goals! ";
+      "Hello, I'm Jacob! I'm a Software Engineer, currently developing for Liberty Mutual in Boston, Massachusetts. Outside of work, I'm part of the moderation team at 'The Odin Project' and always enjoy helping new Web Developers reach their goals! ";
     let typeTimer = setInterval(function() {
       n = n + 1;
       p.innerHTML = "> " + str.slice(0, n);
@@ -114,7 +113,7 @@ export default class Landing extends Component {
         <br />
         <img
           src={skills}
-          style={{ height: "300px", width: "300px", border: "none" }}
+          style={{ height: "180px", width: "180px", border: "none" }}
           alt=""
         />
         <br />
@@ -176,7 +175,6 @@ export default class Landing extends Component {
             source={z80}
           ></FlipContainer>
         </div>
-        <GithubCalendar></GithubCalendar>
         <br />
         <br />
         <div className="container testimonials">
@@ -230,7 +228,9 @@ export default class Landing extends Component {
         </div>
         <br />
         <br />
-        <div className="header-text">Looking for a Web Developer?</div>
+        <div className="header-text">
+          Let's make something awesome together.
+        </div>
         <br />
         <div className="hands-wrapper">
           <img className="border-center" src={webdev} alt="" />
