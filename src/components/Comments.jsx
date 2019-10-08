@@ -33,9 +33,11 @@ class Comments extends Component {
     })
       .then(res => res.json())
       .then(response => {
-        let comments = this.state.comments;
-        comments.push(response);
-        this.setState({ comments: comments });
+        this.setState(
+          { 
+            comments: [...this.state.comments, response]
+          }
+        );
       })
       .catch(error => console.error("Error:", error));
   };
