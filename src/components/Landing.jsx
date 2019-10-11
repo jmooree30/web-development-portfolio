@@ -1,101 +1,52 @@
-import React, { Component } from "react";
-import FlipContainer from "./FlipContainer";
-import Contact from "./Contact";
-import cw from "../assets/cw.png";
-import ss from "../assets/ss.png";
-import chess from "../assets/chess.png";
-import book from "../assets/book.png";
-import calc from "../assets/calc.png";
-import alex from "../assets/alex.jpeg";
-import vlad from "../assets/vlad.jpeg";
-import game from "../assets/game.png";
-import webdev from "../assets/webdev.gif";
-import skills from "../assets/projects.gif";
-import prec from "../assets/prec.png";
-import portfolio from "../assets/portfolio.png";
-import gameboy from "../assets/gameboy.png";
-import z80 from "../assets/z80.Default";
+import React, { Component } from 'react';
+import FlipContainer from './FlipContainer';
+import Contact from './Contact';
+import cw from '../assets/cw.png';
+import ss from '../assets/ss.png';
+import chess from '../assets/chess.png';
+import book from '../assets/book.png';
+import calc from '../assets/calc.png';
+import alex from '../assets/alex.jpeg';
+import vlad from '../assets/vlad.jpeg';
+import huiyi from '../assets/hc.jpeg';
+import briggs from '../assets/be.jpeg';
+import game from '../assets/game.png';
+import webdev from '../assets/webdev.gif';
+import skills from '../assets/projects.gif';
+import prec from '../assets/prec.png';
+import portfolio from '../assets/portfolio.png';
+import gameboy from '../assets/gameboy.png';
+import z80 from '../assets/z80.Default';
 
 export default class Landing extends Component {
-  handleScroll = () => {
-    this.scrollEventHandler("first-recomend", "fr");
-    this.scrollEventHandler("second-recomend", "sr");
-  };
-
-  scrollEventHandler = (element, direction) => {
-    if (this.isScrolledIntoViewTwo(document.getElementById(`${element}`))) {
-      let view = document.getElementById(`${element}`);
-      if (direction === "fr") {
-        view.dataset.fr = "1";
-        view.style.visibility = "visible";
-      }
-      if (direction === "sr") {
-        view.dataset.fr = "1";
-        view.style.visibility = "visible";
-      }
-    }
-  };
-
-  isScrolledIntoView = el => {
-    if (el.style.visibility !== "visible") {
-      const elemTop = el.getBoundingClientRect().top;
-      const elemBottom = el.getBoundingClientRect().bottom;
-      const isVisible = elemTop >= 0 && elemBottom <= window.innerHeight;
-      return isVisible;
-    }
-  };
-  isScrolledIntoViewTwo = el => {
-    if (el.style.visibility !== "visible") {
-      const elemTop = el.getBoundingClientRect().top;
-      const elemBottom = el.getBoundingClientRect().bottom;
-      const isMobile =
-        navigator.userAgent.match(/iphone|android|blackberry/gi) || false;
-      let isVisible;
-      if (isMobile) {
-        isVisible = elemTop >= 0 && elemBottom - 280 <= window.innerHeight;
-      } else {
-        isVisible = elemTop >= 0 && elemBottom - 120 <= window.innerHeight;
-      }
-      return isVisible;
-    }
-  };
-
   componentDidMount() {
-    const p = document.getElementById("text");
-    p.innerHTML = "";
+    window.scrollTo(0, 0);
+
+    const p = document.getElementById('text');
+    p.innerHTML = '';
     let n = 0;
     const str =
       "Hello, I'm Jacob! I'm a Software Engineer, currently developing for Liberty Mutual in Boston, Massachusetts. Outside of work, I'm part of the moderation team at 'The Odin Project' and always enjoy helping new Web Developers reach their goals! ";
     let typeTimer = setInterval(function() {
       n = n + 1;
-      p.innerHTML = "> " + str.slice(0, n);
+      p.innerHTML = '> ' + str.slice(0, n);
       if (n === str.length) {
         clearInterval(typeTimer);
-        p.innerHTML = "> " + str;
+        p.innerHTML = '> ' + str;
         n = 0;
         setInterval(function() {
           if (n === 0) {
-            p.innerHTML = "> " + str + "|";
+            p.innerHTML = '> ' + str + '|';
             n = 1;
           } else {
-            p.innerHTML = "> " + str;
+            p.innerHTML = '> ' + str;
             n = 0;
           }
         }, 500);
       }
     }, 20);
-
-    window.scrollTo(0, 0);
-    let firstRecomend = document.getElementById("first-recomend");
-    let secondRecomend = document.getElementById("second-recomend");
-    firstRecomend.style.visibility = "hidden";
-    secondRecomend.style.visibility = "hidden";
-    window.addEventListener("scroll", this.handleScroll);
   }
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll, false);
-  }
   render() {
     return (
       <div id="landing-top">
@@ -113,7 +64,7 @@ export default class Landing extends Component {
         <br />
         <img
           src={skills}
-          style={{ height: "180px", width: "180px", border: "none" }}
+          style={{ height: '180px', width: '180px', border: 'none' }}
           alt=""
         />
         <br />
@@ -204,6 +155,59 @@ export default class Landing extends Component {
           </div>
           <br />
           <br />
+
+          <div className="recomendation-wrapper" id="first-recomend">
+            <img className="recomendation-image" src={briggs} alt="" />
+            <br />
+            <i className="recomendation-text">
+              "Jacob is a very versatile developer able to overcome any
+              challenge I've thrown at him; from traversing legacy code, to
+              implementing new features on an unfamiliar tech stack. He is great
+              at digging deep into solving problems and understanding everything
+              around it. When he's not writing code at work, he goes home to
+              hone his skills as a developer and continues to study and learn.
+              He has been an amazing part of my team and he has my up-most
+              respect, not only as a developer, but as a person."
+            </i>
+            <br />
+            <br />
+            <div className="recomendation-person">
+              - Briggs Elsperger
+              <br />
+              <br />
+              Web Developer at Software Alternatives
+            </div>
+          </div>
+          <br />
+          <br />
+
+          <div className="recomendation-wrapper" id="first-recomend">
+            <img className="recomendation-image" src={huiyi} alt="" />
+            <br />
+            <i className="recomendation-text">
+              "I was particularly impressed by Jacob's ability to solve even the
+              most complex problem when I worked with him at CompanyWide. Jacob
+              is always able to take genuine commitment to tasks as a web
+              developer in my team. He had a quick insight into troubleshooting
+              and always had the initiative to learn new concepts, generate
+              original solutions, and suggest improvements. He is a talented
+              self-taught programmer and has both patience and ability to
+              expertly handle complex assignments. Jacob is always willing to
+              listen and keep calm no matter how mass the problem is. I believe
+              Jacob would make a great contribution to any team."
+            </i>
+            <br />
+            <br />
+            <div className="recomendation-person">
+              - Huiyi Chen
+              <br />
+              <br />
+              Full Stack Development Manager
+            </div>
+          </div>
+          <br />
+          <br />
+
           <div className="recomendation-wrapper" id="second-recomend">
             <img className="recomendation-image" src={vlad} alt="" />
             <br />
@@ -219,7 +223,7 @@ export default class Landing extends Component {
             <br />
             <br />
             <div className="recomendation-person">
-              {" "}
+              {' '}
               - Vlad Saraev <br />
               <br />
               Full-Stack Developer
