@@ -26,15 +26,15 @@ export default class Landing extends Component {
     p.innerHTML = '';
     let n = 0;
     const str =
-      "Hello, I'm Jacob! I'm a Software Engineer, currently developing for Liberty Mutual in Boston, Massachusetts. Outside of work, I'm part of the moderation team at 'The Odin Project' and always enjoy helping new Web Developers reach their goals! ";
-    let typeTimer = setInterval(function() {
+      "Hello, I'm Jacob! I'm a Senior Software Engineer, currently developing for Liberty Mutual in Boston, Massachusetts. In my free time, I'm either out enjoying the outdoors, riding ATV's, or at home taking a leap back in time and writing some assembly code to create games that run on old hardware such as the original Nintendo Gameboy!";
+    let typeTimer = setInterval(function () {
       n = n + 1;
       p.innerHTML = '> ' + str.slice(0, n);
       if (n === str.length) {
         clearInterval(typeTimer);
         p.innerHTML = '> ' + str;
         n = 0;
-        setInterval(function() {
+        setInterval(function () {
           if (n === 0) {
             p.innerHTML = '> ' + str + '|';
             n = 1;
