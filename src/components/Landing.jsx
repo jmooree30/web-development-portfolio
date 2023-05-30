@@ -26,7 +26,7 @@ export default class Landing extends Component {
     p.innerHTML = '';
     let n = 0;
     const str =
-      "Hello, I'm Jacob! I'm a Senior Software Engineer, currently developing for Liberty Mutual in Boston, Massachusetts. In my free time, I'm either out enjoying the outdoors, riding ATV's, or at home taking a leap back in time and writing some assembly code to create games that run on old hardware such as the original Nintendo Gameboy!";
+      "Hi, I'm Jacob, a Senior Software Engineer at Liberty Mutual in Boston, Massachusetts. I specialize in web development with extensive experience in various front-end, back-end, and cloud technologies. My passion lies in designing clean, performant, and scalable systems, aiming to consistently deliver solutions that meet and exceed expectations.";
     let typeTimer = setInterval(function () {
       n = n + 1;
       p.innerHTML = '> ' + str.slice(0, n);
