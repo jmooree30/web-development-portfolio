@@ -6,7 +6,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148060151-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'UA-148060151-1');
   </script>
@@ -15,8 +15,8 @@
   <meta name="theme-color" content="#000000">
   <meta name="description" content="Extremely self motivated Boston based Software Developer specializing in Web Development. Proficient in JavaScript, MeteorJS, HTML
   and CSS, as well as the ability to communicate effectively in a team setting, and possessing a strong willingness to learn.">
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" href="/favicon.ico">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Devicon icons-->
@@ -41,6 +41,8 @@
     You need to enable JavaScript to run this app.
   </noscript>
   <div id="root"></div>
+  <!-- Add entry point 👇 -->
+  <script type="module" src="/src/index.jsx"></script>
 </body>
 
 </html>
