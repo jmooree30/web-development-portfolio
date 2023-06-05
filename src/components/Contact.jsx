@@ -63,7 +63,6 @@ class Contact extends Component {
             <button
               className="btn btn-success"
               type="submit"
-              name="submit"
             >
               &nbsp;&nbsp;&nbsp;
               <i className="fa fa-envelope">&nbsp;&nbsp;</i>
