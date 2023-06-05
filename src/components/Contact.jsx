@@ -52,7 +52,7 @@ class Contact extends Component {
       <div>
         <div id="fifty" />
         <div className="contact-container" id="max">
-          <form>
+          <form name="contact" data-netlify="true">
             <div className="input-container">
               <label>First Name</label>
               <br />
