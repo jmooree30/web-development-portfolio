@@ -41,6 +41,19 @@
     You need to enable JavaScript to run this app.
   </noscript>
   <div id="root"></div>
+
+  <form id="myForm" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/" style="display: none;">
+    <input hidden="true" name="form-name" type="text" id="realFormName" />
+    <input hidden="true" name="firstName" type="text" id="firstName" />
+    <input hidden="true" name="lastName" type="text" id="lastName" />
+    <input hidden="true" name="email" type="email" id="email" />
+    <input hidden="true" name="company" type="text" id="company" />
+    <input hidden="true" name="message" type="text" id="message" />
+    <input hidden="true" name="website" type="text" id="website" />
+    <input hidden="true" name="phone" type="text" id="phone" />
+    <input hidden="true" type="submit" value="Submit" />
+  </form>
+
   <!-- Add entry point 👇 -->
   <script type="module" src="/src/index.jsx"></script>
 </body>
