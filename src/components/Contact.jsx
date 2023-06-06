@@ -7,69 +7,49 @@ class Contact extends Component {
   render() {
     return (
       <div>
-        <div id="fifty" />
-        <div className="contact-container" id="max">
-          <form name="contact" method="POST" netlify>
-            <div className="input-container">
+        <div id="fifty"></div>
+        <div class="contact-container" id="max">
+          <form name="contact" method="POST" netlify="true">
+            <div class="input-container">
               <label>First Name</label>
               <br />
-              <input
-                type="text"
-                name="firstName"
-                required
-              />
+              <input type="text" name="firstName" required />
             </div>
-            <div className="input-container">
+            <div class="input-container">
               <label>Last Name</label>
               <br />
-              <input
-                type="text"
-                name="lastName"
-                required
-              />
+              <input type="text" name="lastName" required />
             </div>
-            <div className="input-container">
+            <div class="input-container">
               <label>Phone Number</label>
               <br />
               <input type="tel" name="phone" />
             </div>
-            <div className="input-container">
+            <div class="input-container">
               <label>Website</label>
               <br />
               <input type="text" name="website" />
             </div>
-            <div className="input-container">
+            <div class="input-container">
               <label>Company</label>
               <br />
               <input type="text" name="company" />
             </div>
-            <div className="input-container">
+            <div class="input-container">
               <label>Email</label>
-              <input
-                type="text"
-                name="email"
-                required
-              />
+              <input type="text" name="email" required />
             </div>
-            <div className="textarea-container">
+            <div class="textarea-container">
               <label>Message</label>
-              <textarea
-                rows={5}
-                name="message"
-                cols={30}
-                required
-              />
+              <textarea rows="5" name="message" cols="30" required></textarea>
             </div>
-            <button
-              className="btn btn-success"
-              type="submit"
-            >
-              &nbsp;&nbsp;&nbsp;
-              <i className="fa fa-envelope">&nbsp;&nbsp;</i>
+            <button class="btn btn-success" type="submit">
+              &nbsp;&nbsp;&nbsp;<i class="fa fa-envelope">&nbsp;&nbsp;</i>
             </button>
           </form>
         </div>
       </div>
+
     );
   }
 }
