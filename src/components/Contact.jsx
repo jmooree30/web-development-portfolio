@@ -9,7 +9,7 @@ class Contact extends Component {
       <div>
         <div id="fifty" />
         <div className="contact-container" id="max">
-          <form name="contact" netlify>
+          <form name="contact" method="POST" netlify>
             <div className="input-container">
               <label>First Name</label>
               <br />
