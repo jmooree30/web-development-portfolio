@@ -43,7 +43,7 @@ class Comments extends Component {
   };
 
   getComments = type => {
-    fetch("http://localhost:8888/.netlify/functions/get-comments")
+    fetch("https://jacobmoore.dev/.netlify/functions/get-comments")
       .then(res => res.json())
       .then(comments => {
         console.log("comments:", comments);
