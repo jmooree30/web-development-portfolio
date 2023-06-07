@@ -34,7 +34,7 @@ class Comments extends Component {
       .then(res => res.json())
       .then(response => {
         this.setState(
-          { 
+          {
             comments: [...this.state.comments, response]
           }
         );
@@ -43,9 +43,10 @@ class Comments extends Component {
   };
 
   getComments = type => {
-    fetch("https://desolate-gorge-20931.herokuapp.com/api/comments")
+    fetch("http://localhost:8888/.netlify/functions/get-comments")
       .then(res => res.json())
       .then(comments => {
+        console.log("comments:", comments);
         let commentsArr = [];
         comments.forEach(e => {
           if (e.blog === type) {
@@ -93,7 +94,7 @@ class Comments extends Component {
                   <div className="clearfix" />
                   <hr />
                   <ul className="media-list">
-                    {comments.map(function(object, i) {
+                    {comments.map(function (object, i) {
                       return (
                         <li className="media">
                           <div className="media-body">
