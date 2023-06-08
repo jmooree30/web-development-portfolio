@@ -46,7 +46,6 @@ class Comments extends Component {
     fetch("https://jacobmoore.dev/.netlify/functions/get-comments")
       .then(res => res.json())
       .then(comments => {
-        console.log("comments:", comments);
         let commentsArr = [];
         comments.forEach(e => {
           if (e.blog === type) {

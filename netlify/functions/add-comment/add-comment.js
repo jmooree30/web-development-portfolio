@@ -25,7 +25,7 @@ exports.handler = async (event, context) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: newComment,
+      body: JSON.stringify(newComment),
     };
   } catch (error) {
     console.error('Error saving data:', error);
