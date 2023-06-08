@@ -18,7 +18,8 @@ exports.handler = async (event, context) => {
       name: data.name,
       blog: data.blog
     });
-    newComment.save();
+
+    await newComment.save();
 
     return {
       statusCode: 200,
