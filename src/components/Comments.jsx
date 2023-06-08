@@ -26,7 +26,7 @@ class Comments extends Component {
       blog: this.props.type
     };
     const url = process.env.NODE_ENV === 'production'
-      ? 'https://api.example.com/.netlify/functions/add-comment'
+      ? 'https://jacobmoore.dev/.netlify/functions/add-comment'
       : 'http://localhost:3000/.netlify/functions/add-comment';
 
     fetch(url, {
@@ -47,7 +47,7 @@ class Comments extends Component {
 
   getComments = type => {
     const url = process.env.NODE_ENV === 'production'
-      ? 'https://api.example.com/.netlify/functions/get-comments'
+      ? 'https://jacobmoore.dev/.netlify/functions/get-comments'
       : 'http://localhost:3000/.netlify/functions/get-comments';
 
     fetch(url)
