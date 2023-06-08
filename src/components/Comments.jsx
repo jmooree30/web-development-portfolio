@@ -24,7 +24,7 @@ class Comments extends Component {
       name: this.state.name,
       blog: this.props.type
     };
-    fetch("https://desolate-gorge-20931.herokuapp.com/api/comments", {
+    fetch("https://jacobmoore.dev/.netlify/functions/add-comment", {
       method: "POST",
       body: JSON.stringify(commentObj),
       headers: {

@@ -1,4 +1,0 @@
-[functions]
-  [functions.get-comments]
-    path = "functions/get-comments.js"
-    route = "/.netlify/functions/get-comments"

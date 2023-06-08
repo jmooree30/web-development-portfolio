@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Comment = require('./schema');
+const Comment = require('./../schema');
 
 exports.handler = async (event, context) => {
   const mongoURI = process.env.mongoURI;
