@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../styles/comments.css";
-require('dotenv').config();
 
 class Comments extends Component {
   constructor() {
