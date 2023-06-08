@@ -26,9 +26,11 @@ class Comments extends Component {
       name: this.state.name,
       blog: this.props.type
     };
-    const url = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_PRODUCTION_URL : process.env.REACT_APP_DEVELOPMENT_URL;
+    const url = process.env.NODE_ENV === 'production'
+      ? 'https://api.example.com/.netlify/functions/add-comment'
+      : 'http://localhost:3000/.netlify/functions/add-comment';
 
-    fetch(url + "/.netlify/functions/add-comment", {
+    fetch(url, {
       method: "POST",
       body: JSON.stringify(commentObj),
       headers: {
@@ -45,9 +47,11 @@ class Comments extends Component {
   };
 
   getComments = type => {
-    const url = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_PRODUCTION_URL : process.env.REACT_APP_DEVELOPMENT_URL;
+    const url = process.env.NODE_ENV === 'production'
+      ? 'https://api.example.com/.netlify/functions/get-comments'
+      : 'http://localhost:3000/.netlify/functions/get-comments';
 
-    fetch(url + "/.netlify/functions/get-comments")
+    fetch(url)
       .then(res => res.json())
       .then(comments => {
         let commentsArr = [];
@@ -59,6 +63,7 @@ class Comments extends Component {
         this.setState({ comments: commentsArr.reverse() });
       });
   };
+
 
   render() {
     let comments = this.state.comments;
