@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "../styles/comments.css";
+require('dotenv').config();
+
 class Comments extends Component {
   constructor() {
     super();
@@ -24,7 +26,9 @@ class Comments extends Component {
       name: this.state.name,
       blog: this.props.type
     };
-    fetch("https://jacobmoore.dev/.netlify/functions/add-comment", {
+    const url = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_PRODUCTION_URL : process.env.REACT_APP_DEVELOPMENT_URL;
+
+    fetch(url + "/.netlify/functions/add-comment", {
       method: "POST",
       body: JSON.stringify(commentObj),
       headers: {
@@ -33,17 +37,17 @@ class Comments extends Component {
     })
       .then(res => res.json())
       .then(response => {
-        this.setState(
-          {
-            comments: [...this.state.comments, response]
-          }
-        );
+        this.setState({
+          comments: [...this.state.comments, response]
+        });
       })
       .catch(error => console.error("Error:", error));
   };
 
   getComments = type => {
-    fetch("https://jacobmoore.dev/.netlify/functions/get-comments")
+    const url = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_PRODUCTION_URL : process.env.REACT_APP_DEVELOPMENT_URL;
+
+    fetch(url + "/.netlify/functions/get-comments")
       .then(res => res.json())
       .then(comments => {
         let commentsArr = [];
