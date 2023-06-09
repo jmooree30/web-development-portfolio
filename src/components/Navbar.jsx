@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { HashLink as Link } from "react-router-hash-link";
 import resume from "../assets/resume.pdf";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -31,9 +31,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`navbar navbar-default navbar-fixed-top ${
-        scrolled ? "scrolled" : ""
-        }`}
+      className="navbar navbar-default navbar-fixed-top"
+      style={{ top: scrolled ? 0 : -75 }}
     >
       <div className="container-fluid">
         <div className="navbar-header">
